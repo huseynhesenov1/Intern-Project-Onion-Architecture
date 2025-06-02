@@ -1,0 +1,11 @@
+C:\Users\ACER\source\repos\Project\src\Infrastructure\Project.Infrastructure\bin\Debug\net8.0\Project.Infrastructure.deps.json
+C:\Users\ACER\source\repos\Project\src\Infrastructure\Project.Infrastructure\bin\Debug\net8.0\Project.Infrastructure.dll
+C:\Users\ACER\source\repos\Project\src\Infrastructure\Project.Infrastructure\bin\Debug\net8.0\Project.Infrastructure.pdb
+C:\Users\ACER\source\repos\Project\src\Infrastructure\Project.Infrastructure\obj\Debug\net8.0\Project.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\source\repos\Project\src\Infrastructure\Project.Infrastructure\obj\Debug\net8.0\Project.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ACER\source\repos\Project\src\Infrastructure\Project.Infrastructure\obj\Debug\net8.0\Project.Infrastructure.AssemblyInfo.cs
+C:\Users\ACER\source\repos\Project\src\Infrastructure\Project.Infrastructure\obj\Debug\net8.0\Project.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ACER\source\repos\Project\src\Infrastructure\Project.Infrastructure\obj\Debug\net8.0\Project.Infrastructure.dll
+C:\Users\ACER\source\repos\Project\src\Infrastructure\Project.Infrastructure\obj\Debug\net8.0\refint\Project.Infrastructure.dll
+C:\Users\ACER\source\repos\Project\src\Infrastructure\Project.Infrastructure\obj\Debug\net8.0\Project.Infrastructure.pdb
+C:\Users\ACER\source\repos\Project\src\Infrastructure\Project.Infrastructure\obj\Debug\net8.0\ref\Project.Infrastructure.dll
