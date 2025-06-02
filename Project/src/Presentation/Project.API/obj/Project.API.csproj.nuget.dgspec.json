@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ACER\\source\\repos\\Project\\src\\Presentation\\Project.API\\Project.API.csproj": {}
+    "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Project.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ACER\\source\\repos\\Project\\src\\Core\\Project.Application\\Project.Application.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Project.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Core\\Project.Application\\Project.Application.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Project.Application.csproj",
         "projectName": "Project.Application",
-        "projectPath": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Core\\Project.Application\\Project.Application.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Project.Application.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Core\\Project.Application\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ACER\\source\\repos\\Project\\src\\Core\\Project.Domain\\Project.Domain.csproj": {
-                "projectPath": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Core\\Project.Domain\\Project.Domain.csproj"
+              "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Project.Domain.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Project.Domain.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\ACER\\source\\repos\\Project\\src\\Core\\Project.Domain\\Project.Domain.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Project.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Core\\Project.Domain\\Project.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Project.Domain.csproj",
         "projectName": "Project.Domain",
-        "projectPath": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Core\\Project.Domain\\Project.Domain.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Project.Domain.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Core\\Project.Domain\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -144,14 +144,14 @@
         }
       }
     },
-    "C:\\Users\\ACER\\source\\repos\\Project\\src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj",
         "projectName": "Project.Infrastructure",
-        "projectPath": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Infrastructure\\Project.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -209,14 +209,14 @@
         }
       }
     },
-    "C:\\Users\\ACER\\source\\repos\\Project\\src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj",
         "projectName": "Project.Persistance",
-        "projectPath": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Infrastructure\\Project.Persistance\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -237,8 +237,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ACER\\source\\repos\\Project\\src\\Core\\Project.Application\\Project.Application.csproj": {
-                "projectPath": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Core\\Project.Application\\Project.Application.csproj"
+              "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Project.Application.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Project.Application.csproj"
               }
             }
           }
@@ -298,14 +298,14 @@
         }
       }
     },
-    "C:\\Users\\ACER\\source\\repos\\Project\\src\\Presentation\\Project.API\\Project.API.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Project.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Presentation\\Project.API\\Project.API.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Project.API.csproj",
         "projectName": "Project.API",
-        "projectPath": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Presentation\\Project.API\\Project.API.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Project.API.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Presentation\\Project.API\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -326,11 +326,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ACER\\source\\repos\\Project\\src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj"
+              "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj"
               },
-              "C:\\Users\\ACER\\source\\repos\\Project\\src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj": {
-                "projectPath": "C:\\Users\\ACER\\source\\repos\\Project\\src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj"
+              "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj"
               }
             }
           }
