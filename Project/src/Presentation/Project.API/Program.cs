@@ -7,8 +7,6 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Project.API.Extensions;
 var builder = WebApplication.CreateBuilder(args);
-
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerWithJwt();
@@ -35,17 +33,13 @@ builder.Services.AddAuthentication(options =>
 });
 builder.Services.AddDbContext<AppDbContext>(opt=>opt.UseSqlServer(builder.Configuration.GetConnectionString("MsSQL")));
 var app = builder.Build();
-
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

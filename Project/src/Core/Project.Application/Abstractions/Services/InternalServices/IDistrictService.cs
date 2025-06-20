@@ -5,10 +5,10 @@ namespace Project.Application.Abstractions.Services.InternalServices
 {
     public interface IDistrictService
     {
-        Task<ICollection<DistrictReadDTO>> GetAllAsync();
+        Task<ICollection<CreateDistrictOutput>> GetAllAsync();
         Task<District> GetByIdAsync(int id);
-        Task<District> CreateAsync(DistrictCreateDTO studentCreateDTO);
-        Task<District> UpdateAsync(int id, DistrictUpdateDTO studentUpdateDTO);
+        Task<District> CreateAsync(CreateDistrictInput studentCreateDTO);
+        Task<District> UpdateAsync(int id, UpdateDistrictInput studentUpdateDTO);
         Task<District> SoftDeleteAsync(int id);
     }
 }

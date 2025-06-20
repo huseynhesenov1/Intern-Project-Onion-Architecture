@@ -21,12 +21,12 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         }
 
-        public async Task<ApiResponse<int>> CreateAsync(CampaignCreateDTO campaignCreateDTO)
+        public async Task<ApiResponse<int>> CreateAsync(CreateCampaignInput campaignCreateDTO)
         {
             var newStartDate = campaignCreateDTO.StartDate;
             var newEndDate = campaignCreateDTO.EndDate;
 
-            var existingCampaigns = await _campaignReadRepository.GetAllAsync(false);
+            var existingCampaigns = await _campaignReadRepository.GetAllAsync(false, false);
 
             var conflictingCampaign = existingCampaigns.FirstOrDefault(c =>
                 !c.IsDeleted &&
@@ -55,7 +55,11 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                 IsDeleted = false
             };
 
-            await _campaignWriteRepository.CreateAsync(newCampaign);
+            var res = await _campaignWriteRepository.CreateAsync(newCampaign);
+            if (res == null)
+            {
+                return ApiResponse<int>.Fail("Kampaniya yaradılmadı", "Kampaniya yaradılmadı");
+            }
             await _campaignWriteRepository.SaveChangeAsync();
 
             return ApiResponse<int>.Success(newCampaign.Id, "Kampaniya uğurla yaradıldı");
@@ -66,7 +70,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
 
 
-        public async Task<ApiResponse<int>> UpdateAsync(int id, CampaignUpdateDTO campaignUpdateDTO)
+        public async Task<ApiResponse<int>> UpdateAsync(int id, UpdateCampaignInput campaignUpdateDTO)
         {
             var existingCampaign = await _campaignReadRepository.GetByIdAsync(id, true);
             if (existingCampaign == null || existingCampaign.IsDeleted)
@@ -77,7 +81,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             var newStartDate = campaignUpdateDTO.StartDate;
             var newEndDate = campaignUpdateDTO.EndDate;
 
-            var otherCampaigns = await _campaignReadRepository.GetAllAsync(false);
+            var otherCampaigns = await _campaignReadRepository.GetAllAsync(false, false);
             var conflictingCampaign = otherCampaigns.FirstOrDefault(c =>
                 c.Id != id && !c.IsDeleted &&
                 ((newStartDate >= c.StartDate && newStartDate <= c.EndDate) ||
@@ -108,56 +112,56 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
 
 
-        public async Task<ICollection<CampaignReadDTO>> GetAllAsync()
+        public async Task<ICollection<CampaignOutput>> GetAllAsync()
         {
-            ICollection<Campaign> products = await _campaignReadRepository.GetAllAsync(false);
-            List<CampaignReadDTO> productReadDTOs = products
-        .Select(product => new CampaignReadDTO
+            ICollection<Campaign> campaigns = await _campaignReadRepository.GetAllAsync(false, false);
+            List<CampaignOutput> campaignReadDTOs = campaigns
+        .Select(campaign => new CampaignOutput
         {
-            Id = product.Id,
-            IsActive = product.IsActive,
-            Name = product.Name,
-            Description = product.Description,
-            StartDate = product.StartDate,
-            EndDate = product.EndDate,
-            DistrictId = product.DistrictId,
-            DiscountPercent = product.DiscountPercent,
-            UpdatedAt = product.UpdatedAt,
-            CreatedAt = product.CreatedAt,
+            Id = campaign.Id,
+            IsActive = campaign.IsActive,
+            Name = campaign.Name,
+            Description = campaign.Description,
+            StartDate = campaign.StartDate,
+            EndDate = campaign.EndDate,
+            DistrictId = campaign.DistrictId,
+            DiscountPercent = campaign.DiscountPercent,
+            UpdatedAt = campaign.UpdatedAt,
+            CreatedAt = campaign.CreatedAt,
 
         }).ToList();
-            return productReadDTOs;
+            return campaignReadDTOs;
         }
 
 
-        public async Task<ApiResponse<CampaignReadDTO>> GetByIdAsync(int id)
+        public async Task<ApiResponse<CampaignOutput>> GetByIdAsync(int id)
         {
             try
             {
-                var product = await _campaignReadRepository.GetByIdAsync(id, false);
-                if (product == null || product.IsDeleted)
+                var campaign = await _campaignReadRepository.GetByIdAsync(id, false);
+                if (campaign == null || campaign.IsDeleted)
                 {
-                    return ApiResponse<CampaignReadDTO>.Fail("Campaign not found", "Invalid Campaign ID");
+                    return ApiResponse<CampaignOutput>.Fail("Campaign not found", "Invalid Campaign ID");
                 }
-                CampaignReadDTO productReadDTO = new CampaignReadDTO()
+                CampaignOutput campaignReadDTO = new CampaignOutput()
                 {
-                    Id = product.Id,
-                    IsActive = product.IsActive,
-                    Name = product.Name,
-                    Description = product.Description,
-                    StartDate = product.StartDate,
-                    EndDate = product.EndDate,
-                    DistrictId = product.DistrictId,
-                    DiscountPercent = product.DiscountPercent,
-                    UpdatedAt = product.UpdatedAt,
-                    CreatedAt = product.CreatedAt,
+                    Id = campaign.Id,
+                    IsActive = campaign.IsActive,
+                    Name = campaign.Name,
+                    Description = campaign.Description,
+                    StartDate = campaign.StartDate,
+                    EndDate = campaign.EndDate,
+                    DistrictId = campaign.DistrictId,
+                    DiscountPercent = campaign.DiscountPercent,
+                    UpdatedAt = campaign.UpdatedAt,
+                    CreatedAt = campaign.CreatedAt,
                 };
 
-                return ApiResponse<CampaignReadDTO>.Success(productReadDTO, "Campaign retrieved successfully");
+                return ApiResponse<CampaignOutput>.Success(campaignReadDTO, "Campaign retrieved successfully");
             }
             catch (Exception ex)
             {
-                return ApiResponse<CampaignReadDTO>.Fail(ex.Message, "Error retrieving Campaign");
+                return ApiResponse<CampaignOutput>.Fail(ex.Message, "Error retrieving Campaign");
             }
         }
 
@@ -165,13 +169,13 @@ namespace Project.Persistance.Implementations.Services.InternalServices
         {
             try
             {
-                var worker = await _campaignReadRepository.GetByIdAsync(id, true);
-                if (worker == null || worker.IsDeleted)
+                var campaign = await _campaignReadRepository.GetByIdAsync(id, true);
+                if (campaign == null || campaign.IsDeleted)
                 {
                     return ApiResponse<bool>.Fail("Campaign not found", "Invalid Campaign ID");
                 }
 
-                _campaignWriteRepository.SoftDelete(worker);
+                _campaignWriteRepository.SoftDelete(campaign);
                 await _campaignWriteRepository.SaveChangeAsync();
 
                 return ApiResponse<bool>.Success(true, "Campaign deleted successfully");
@@ -184,13 +188,13 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<PagedResult<Campaign>> GetPaginatedAsync(PaginationParams @params)
         {
-            var allCategories = await _campaignReadRepository.GetAllAsync(false);
+            var allCampagions = await _campaignReadRepository.GetAllAsync(false, false);
 
-            var filtered = allCategories
+            var filtered = allCampagions
                 .Skip((@params.PageNumber - 1) * @params.PageSize)
                 .Take(@params.PageSize)
                 .ToList();
-            int totalCount = allCategories.Count;
+            int totalCount = allCampagions.Count;
             return new PagedResult<Campaign>(filtered, totalCount, @params.PageNumber, @params.PageSize);
         }
 
@@ -198,18 +202,17 @@ namespace Project.Persistance.Implementations.Services.InternalServices
         {
             try
             {
-                var worker = await _campaignReadRepository.GetByIdAsync(id, true);
-                if (worker == null || worker.IsDeleted)
+                var campaign = await _campaignReadRepository.GetByIdAsync(id, true);
+                if (campaign == null)
                 {
                     return ApiResponse<bool>.Fail("Campaign not found", "Invalid Campaign ID");
                 }
-                if (worker.IsActive)
+                if (campaign.IsActive)
                 {
-                    return ApiResponse<bool>.Fail("Campaign Is Active", "Campaign Is Active");
+                    return ApiResponse<bool>.Fail("Bu kampaniya artıq aktivdir.", "This campaign is already active.");
                 }
 
-                worker.IsActive = true;
-                _campaignWriteRepository.Update(worker);
+                await _campaignWriteRepository.SetActiveAsync(id);
                 await _campaignWriteRepository.SaveChangeAsync();
 
                 return ApiResponse<bool>.Success(true, "Campaign enabled successfully");
@@ -223,17 +226,16 @@ namespace Project.Persistance.Implementations.Services.InternalServices
         {
             try
             {
-                var worker = await _campaignReadRepository.GetByIdAsync(id, true);
-                if (worker == null || worker.IsDeleted)
+                var campaign = await _campaignReadRepository.GetByIdAsync(id, true);
+                if (campaign == null)
                 {
                     return ApiResponse<bool>.Fail("Campaign not found", "Invalid Campaign ID");
                 }
-                if (!worker.IsActive)
+                if (!campaign.IsActive)
                 {
-                    return ApiResponse<bool>.Fail("Campaign Is not Active", "Campaign Is not Active");
+                    return ApiResponse<bool>.Fail("Bu kampaniya artıq qeyri-aktivdir.", "This campaign is already inactive.");
                 }
-                worker.IsActive = false;
-                _campaignWriteRepository.Update(worker);
+                await _campaignWriteRepository.SetActiveAsync(id);
                 await _campaignWriteRepository.SaveChangeAsync();
 
                 return ApiResponse<bool>.Success(true, "Campaign disabled successfully");

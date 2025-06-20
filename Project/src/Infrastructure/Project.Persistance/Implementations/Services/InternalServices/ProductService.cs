@@ -20,7 +20,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             _campaignReadRepository = campaignReadRepository;
         }
 
-        public async Task<int> CreateAsync(ProductCreateDTO productCreateDTO)
+        public async Task<int> CreateAsync(CreateProductInput productCreateDTO)
         {
             Product product = new Product()
             {
@@ -33,7 +33,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             return product.Id;
         }
 
-        public async Task<int> UpdateAsync(int Id, ProductUpdateDTO productUpdateDTO)
+        public async Task<int> UpdateAsync(int Id, UpdateProductInput productUpdateDTO)
         {
             Product product = await _productReadRepository.GetByIdAsync(Id, false);
             if (product == null)
@@ -53,10 +53,10 @@ namespace Project.Persistance.Implementations.Services.InternalServices
         }
 
 
-        public async Task<ICollection<ProductReadDTO>> GetAllAsync()
+        public async Task<ICollection<CreateProductOutput>> GetAllAsync()
         {
-            var products = await _productReadRepository.GetAllAsync(false);
-            var campaigns = await _campaignReadRepository.GetAllAsync(false);
+            var products = await _productReadRepository.GetAllAsync(false, false);
+            var campaigns = await _campaignReadRepository.GetAllAsync(false, false);
             var currentTime = DateTime.UtcNow.AddHours(4);
 
 
@@ -65,7 +65,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                 c.StartDate <= currentTime &&
                 c.EndDate >= currentTime);
 
-            List<ProductReadDTO> productReadDTOs = products.Select(p =>
+            List<CreateProductOutput> productReadDTOs = products.Select(p =>
             {
                 decimal newPrice = p.Price;
                 string campaignName = string.Empty;
@@ -79,7 +79,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                     campaignId = activeCampaign.Id;
                 }
 
-                return new ProductReadDTO
+                return new CreateProductOutput
                 {
                     Id = p.Id,
                     Title = p.Title,
@@ -97,7 +97,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<PagedResult<Product>> GetPaginatedAsync(PaginationParams @params)
         {
-            var allCategories = await _productReadRepository.GetAllAsync(false);
+            var allCategories = await _productReadRepository.GetAllAsync(false, false);
 
             var filtered = allCategories
                 .Skip((@params.PageNumber - 1) * @params.PageSize)
@@ -111,13 +111,13 @@ namespace Project.Persistance.Implementations.Services.InternalServices
         {
             try
             {
-                var worker = await _productReadRepository.GetByIdAsync(id, true);
-                if (worker == null || worker.IsDeleted)
+                var product = await _productReadRepository.GetByIdAsync(id, true);
+                if (product == null || product.IsDeleted)
                 {
                     return ApiResponse<bool>.Fail("Product not found", "Invalid Product ID");
                 }
 
-                _productWriteRepository.SoftDelete(worker);
+                _productWriteRepository.SoftDelete(product);
                 await _productWriteRepository.SaveChangeAsync();
 
                 return ApiResponse<bool>.Success(true, "Product deleted successfully");
@@ -128,16 +128,16 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             }
         }
 
-        public async Task<ApiResponse<ProductReadDTO>> GetByIdAsync(int id)
+        public async Task<ApiResponse<CreateProductOutput>> GetByIdAsync(int id)
         {
             try
             {
                 var product = await _productReadRepository.GetByIdAsync(id, false);
                 if (product == null || product.IsDeleted)
                 {
-                    return ApiResponse<ProductReadDTO>.Fail("Product not found", "Invalid Product ID");
+                    return ApiResponse<CreateProductOutput>.Fail("Product not found", "Invalid Product ID");
                 }
-                ProductReadDTO productReadDTO = new ProductReadDTO()
+                CreateProductOutput productReadDTO = new CreateProductOutput()
                 {
                     Id = product.Id,
                     Title = product.Title,
@@ -148,23 +148,23 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
                 };
 
-                return ApiResponse<ProductReadDTO>.Success(productReadDTO, "Product retrieved successfully");
+                return ApiResponse<CreateProductOutput>.Success(productReadDTO, "Product retrieved successfully");
             }
             catch (Exception ex)
             {
-                return ApiResponse<ProductReadDTO>.Fail(ex.Message, "Error retrieving Product");
+                return ApiResponse<CreateProductOutput>.Fail(ex.Message, "Error retrieving Product");
             }
         }
 
-        public async Task<ICollection<ProductReadDTO>> SearchProductsAsync(string title)
+        public async Task<ICollection<CreateProductOutput>> SearchProductsAsync(string title)
         {
-            var query = await _productReadRepository.GetAllAsync(false);
+            var query = await _productReadRepository.GetAllAsync(false , false);
 
             query = query
             .Where(p =>
             (string.IsNullOrWhiteSpace(title) ||
              p.Title.Contains(title, StringComparison.OrdinalIgnoreCase))).ToList();
-            var workerDTOs = query.Select(p => new ProductReadDTO
+            var workerDTOs = query.Select(p => new CreateProductOutput
             {
                 Id = p.Id,
                 Title = p.Title,

@@ -1,6 +1,6 @@
 ﻿namespace Project.Application.DTOs.WorkerDTOs
 {
-    public record WorkerCreateDTO
+    public record CreateWorkerInput
     {
         public string FinCode { get; set; }
         public string FullName { get; set; }

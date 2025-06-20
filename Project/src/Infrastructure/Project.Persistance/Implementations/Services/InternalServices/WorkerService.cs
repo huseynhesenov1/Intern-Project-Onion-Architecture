@@ -23,7 +23,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             _workerReadRepository = workerReadRepository;
         }
 
-        public async Task<ApiResponse<WorkerCreateResponseDTO>> CreateAsync(WorkerCreateDTO workerCreateDTO)
+        public async Task<ApiResponse<ResponseWorkerOutput>> CreateAsync(CreateWorkerInput workerCreateDTO)
         {
             try
             {
@@ -31,7 +31,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                     .FirstOrDefaultAsync(w => w.FinCode == workerCreateDTO.FinCode && !w.IsDeleted);
                 if (existingWorker != null)
                 {
-                    return ApiResponse<WorkerCreateResponseDTO>.Fail("Worker with this FinCode already exists", "Duplicate FinCode");
+                    return ApiResponse<ResponseWorkerOutput>.Fail("Worker with this FinCode already exists", "Duplicate FinCode");
                 }
 
                 var worker = new Worker
@@ -44,8 +44,8 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                 await _workerWriteRepository.CreateAsync(worker);
                 await _workerWriteRepository.SaveChangeAsync();
                 var token = _jwtService.GenerateToken(worker);
-                return ApiResponse<WorkerCreateResponseDTO>.Success(
-                    new WorkerCreateResponseDTO
+                return ApiResponse<ResponseWorkerOutput>.Success(
+                    new ResponseWorkerOutput
                     {
                         WorkerId = worker.Id,
                         WorkerToken = token
@@ -55,10 +55,10 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             }
             catch (Exception ex)
             {
-                return ApiResponse<WorkerCreateResponseDTO>.Fail(ex.Message, "Error creating worker");
+                return ApiResponse<ResponseWorkerOutput>.Fail(ex.Message, "Error creating worker");
             }
         }
-        public async Task<ApiResponse<bool>> UpdateAsync(int id, WorkerUpdateDTO workerUpdateDTO)
+        public async Task<ApiResponse<bool>> UpdateAsync(int id, UpdateWorkerInput workerUpdateDTO)
         {
             try
             {
@@ -67,7 +67,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                 {
                     return ApiResponse<bool>.Fail("Worker not found", "Invalid worker ID");
                 }
-
+                //burda Tbale muraciet etmeden yaz 
                 var existingWorker = await _workerReadRepository.Table
                     .FirstOrDefaultAsync(w => w.FinCode == workerUpdateDTO.FinCode && w.Id != id && !w.IsDeleted);
                 if (existingWorker != null)
@@ -92,32 +92,32 @@ namespace Project.Persistance.Implementations.Services.InternalServices
         }
         public async Task<ICollection<Worker>> GetAllAsync()
         {
-            return await _workerReadRepository.GetAllAsync(false);
+            return await _workerReadRepository.GetAllAsync(false, false);
         }
         public async Task<PagedResult<Worker>> GetPaginatedAsync(PaginationParams @params)
         {
-            var allCategories = await _workerReadRepository.GetAllAsync(false);
+            var allWorkers = await _workerReadRepository.GetAllAsync(false, false);
 
-            var filtered = allCategories
+            var filtered = allWorkers
                 .Skip((@params.PageNumber - 1) * @params.PageSize)
                 .Take(@params.PageSize)
                 .ToList();
-            int totalCount = allCategories.Count;
+            int totalCount = allWorkers.Count;
 
             return new PagedResult<Worker>(filtered, totalCount, @params.PageNumber, @params.PageSize);
         }
 
-        public async Task<ApiResponse<WorkerDTO>> GetByIdAsync(int id)
+        public async Task<ApiResponse<CreateWorkerOutput>> GetByIdAsync(int id)
         {
             try
             {
                 var worker = await _workerReadRepository.GetByIdAsync(id, true);
                 if (worker == null || worker.IsDeleted)
                 {
-                    return ApiResponse<WorkerDTO>.Fail("Worker not found", "Invalid worker ID");
+                    return ApiResponse<CreateWorkerOutput>.Fail("Worker not found", "Invalid worker ID");
                 }
 
-                var workerDto = new WorkerDTO
+                var workerDto = new CreateWorkerOutput
                 {
                     WorkerId = worker.Id,
                     FinCode = worker.FinCode,
@@ -126,11 +126,11 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                     DistrictId = worker.DistrictId,
                 };
 
-                return ApiResponse<WorkerDTO>.Success(workerDto, "Worker retrieved successfully");
+                return ApiResponse<CreateWorkerOutput>.Success(workerDto, "Worker retrieved successfully");
             }
             catch (Exception ex)
             {
-                return ApiResponse<WorkerDTO>.Fail(ex.Message, "Error retrieving worker");
+                return ApiResponse<CreateWorkerOutput>.Fail(ex.Message, "Error retrieving worker");
             }
         }
 
@@ -156,9 +156,9 @@ namespace Project.Persistance.Implementations.Services.InternalServices
         }
 
 
-        public async Task<ICollection<WorkerDTO>> SearchProductsAsync(WorkerSearchDTO workerSearchDTO)
+        public async Task<ICollection<CreateWorkerOutput>> SearchProductsAsync(SearchWorkerInput workerSearchDTO)
         {
-            var query = await _workerReadRepository.GetAllAsync(false);
+            var query = await _workerReadRepository.GetAllAsync(false, false);
 
             query = query
     .Where(p =>
@@ -176,7 +176,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
     )
     .ToList();
 
-            var workerDTOs = query.Select(p => new WorkerDTO
+            var workerDTOs = query.Select(p => new CreateWorkerOutput
             {
                 WorkerId = p.Id,
                 FullName = p.FullName,

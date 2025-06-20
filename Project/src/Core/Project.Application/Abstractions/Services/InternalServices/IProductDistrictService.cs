@@ -6,6 +6,6 @@ namespace Project.Application.Abstractions.Services.InternalServices
     public interface IProductDistrictService
     {
         Task<ICollection<ProductDistrictPrice>> GetAllAsync();
-        Task<ProductDistrictPrice> CreateAsync(ProductDistrictPriceCreateDTO dto);
+        Task<ProductDistrictPrice> CreateAsync(CreateProductDistrictPriceInput dto);
     }
 }

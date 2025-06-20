@@ -28,16 +28,7 @@ public class WriteRepository<T> : IWriteRepository<T> where T : BaseAuditableEnt
         tentity.IsDeleted = true;
         return tentity;
     }
-    public T HardDelete(T tentity)
-    {
-        if (tentity is null)
-        {
-            throw new Exception("Bu Id-e uygun deyer tapilmadi");
-        }
-        Table.Remove(tentity);
-        return tentity;
-
-    }
+    
 
     public T Restore(T tentity)
     {

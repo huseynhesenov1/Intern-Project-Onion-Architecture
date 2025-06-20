@@ -16,13 +16,13 @@ namespace Project.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ICollection<DistrictReadDTO>> GetAll()
+        public async Task<ICollection<CreateDistrictOutput>> GetAll()
         {
             return await _districtService.GetAllAsync();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromForm] DistrictCreateDTO reviewDto)
+        public async Task<IActionResult> Create([FromForm] CreateDistrictInput reviewDto)
         {
             try
             {
@@ -59,7 +59,7 @@ namespace Project.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromForm] DistrictUpdateDTO reviewUpdateDTO)
+        public async Task<IActionResult> Update(int id, [FromForm] UpdateDistrictInput reviewUpdateDTO)
         {
             try
             {

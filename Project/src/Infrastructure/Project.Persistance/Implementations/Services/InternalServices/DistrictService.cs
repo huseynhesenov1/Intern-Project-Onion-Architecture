@@ -17,7 +17,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
         }
 
 
-        public async Task<District> CreateAsync(DistrictCreateDTO districtCreateDTO)
+        public async Task<District> CreateAsync(CreateDistrictInput districtCreateDTO)
         {
             District district = new District()
             {
@@ -30,7 +30,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
         }
 
 
-        public async Task<District> UpdateAsync(int Id, DistrictUpdateDTO districtUpdateDTO)
+        public async Task<District> UpdateAsync(int Id, UpdateDistrictInput districtUpdateDTO)
         {
             District district = await _districtReadRepository.GetByIdAsync(Id, false);
             if (district == null)
@@ -50,11 +50,11 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
 
 
-        public async Task<ICollection<DistrictReadDTO>> GetAllAsync()
+        public async Task<ICollection<CreateDistrictOutput>> GetAllAsync()
         {
-            ICollection<District> districts = await _districtReadRepository.GetAllAsync(false);
-            List<DistrictReadDTO> districtReadDTOs = districts
-                .Select(d => new DistrictReadDTO
+            ICollection<District> districts = await _districtReadRepository.GetAllAsync(false, false);
+            List<CreateDistrictOutput> districtReadDTOs = districts
+                .Select(d => new CreateDistrictOutput
                 {
                     Id = d.Id,
                     Name = d.Name,
@@ -77,12 +77,12 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<District> SoftDeleteAsync(int id)
         {
-            District catagory = await _districtReadRepository.GetByIdAsync(id, true);
-            if (catagory is null)
+            District district = await _districtReadRepository.GetByIdAsync(id, true);
+            if (district is null)
             {
                 throw new Exception("Bu Id-e uygun deyer tapilmadi");
             }
-            var res = _districtWriteRepository.SoftDelete(catagory);
+            var res = _districtWriteRepository.SoftDelete(district);
             await _districtWriteRepository.SaveChangeAsync();
             return res;
         }

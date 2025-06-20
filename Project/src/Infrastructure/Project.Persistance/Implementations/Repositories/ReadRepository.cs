@@ -2,6 +2,7 @@
 using Project.Application.Abstractions.Repositories;
 using Project.Domain.Entities.Commons;
 using Project.Persistance.Contexts;
+using System.Linq.Expressions;
 
 namespace Project.Persistance.Implementations.Repositories;
 
@@ -35,17 +36,26 @@ public class ReadRepository<T> : IReadRepository<T> where T : BaseAuditableEntit
 
     }
 
-    public async Task<ICollection<T>> GetAllAsync(bool deleted, params string[] includes)
+    public async Task<ICollection<T>> GetAllAsync(bool deleted, bool isTracking, params Expression<Func<T, object>>[] includes)
     {
         IQueryable<T> query = Table.AsQueryable();
+
         if (includes.Length > 0)
         {
-            foreach (string include in includes)
+            foreach (var include in includes)
             {
                 query = query.Include(include);
             }
         }
 
-        return await query.Where(x => x.IsDeleted == deleted).ToListAsync();
+        if (!isTracking)
+        {
+            query = query.AsNoTracking();
+        }
+
+        query = query.Where(x => x.IsDeleted == deleted);
+
+        return await query.ToListAsync();
     }
+
 }

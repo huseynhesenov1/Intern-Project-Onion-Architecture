@@ -19,12 +19,12 @@ namespace Project.API.Controllers
 
 
         [HttpPost]
-        public async Task<int> Create([FromBody] ProductCreateDTO productCreateDTO)
+        public async Task<int> Create([FromBody] CreateProductInput productCreateDTO)
         {
             return await _productService.CreateAsync(productCreateDTO);
         }
         [HttpPut("{Id}")]
-        public async Task<int> Update(int Id, [FromBody] ProductUpdateDTO productUpdateDTO)
+        public async Task<int> Update(int Id, [FromBody] UpdateProductInput productUpdateDTO)
         {
             try
             {
@@ -36,7 +36,7 @@ namespace Project.API.Controllers
             }
         }
         [HttpGet]
-        public async Task<ICollection<ProductReadDTO>> GetAll()
+        public async Task<ICollection<CreateProductOutput>> GetAll()
         {
             return await _productService.GetAllAsync();
         }
@@ -47,7 +47,7 @@ namespace Project.API.Controllers
             return Ok(result);
         }
         [HttpGet("{id}")]
-        public async Task<ApiResponse<ProductReadDTO>> GetById(int id)
+        public async Task<ApiResponse<CreateProductOutput>> GetById(int id)
         {
             return await _productService.GetByIdAsync(id);
         }

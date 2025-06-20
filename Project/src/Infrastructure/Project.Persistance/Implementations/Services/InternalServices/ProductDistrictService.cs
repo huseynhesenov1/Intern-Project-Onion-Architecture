@@ -16,7 +16,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             _productDistrictPriceReadRepository = productDistrictPriceReadRepository;
         }
 
-        public async Task<ProductDistrictPrice> CreateAsync(ProductDistrictPriceCreateDTO dto)
+        public async Task<ProductDistrictPrice> CreateAsync(CreateProductDistrictPriceInput dto)
         {
             ProductDistrictPrice productDistrictPrice = new ProductDistrictPrice()
             {
@@ -32,7 +32,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<ICollection<ProductDistrictPrice>> GetAllAsync()
         {
-            ICollection<ProductDistrictPrice> result = await _productDistrictPriceReadRepository.GetAllAsync(false);
+            ICollection<ProductDistrictPrice> result = await _productDistrictPriceReadRepository.GetAllAsync(false, false);
             return result;
         }
     }

@@ -15,7 +15,7 @@ namespace Project.API.Controllers
             _productDistrictService = productDistrictService;
         }
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] ProductDistrictPriceCreateDTO productDistrictPriceCreateDTO)
+        public async Task<IActionResult> Create([FromBody] CreateProductDistrictPriceInput productDistrictPriceCreateDTO)
         {
             try
             {

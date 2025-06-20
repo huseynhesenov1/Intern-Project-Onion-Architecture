@@ -1,6 +1,6 @@
 ﻿namespace Project.Application.DTOs.DistrictDTOs
 {
-    public record DistrictUpdateDTO
+    public record UpdateDistrictInput
     {
         public string Name { get; set; }
     }

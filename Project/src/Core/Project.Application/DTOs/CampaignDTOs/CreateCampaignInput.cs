@@ -1,6 +1,6 @@
 ﻿namespace Project.Application.DTOs.Campaign
 {
-    public record CampaignUpdateDTO
+    public record CreateCampaignInput
     {
         public string Name { get; set; }
         public string Description { get; set; }

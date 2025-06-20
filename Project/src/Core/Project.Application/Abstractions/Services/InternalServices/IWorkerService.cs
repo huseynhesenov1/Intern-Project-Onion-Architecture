@@ -8,11 +8,11 @@ namespace Project.Application.Abstractions.Services.InternalServices
     public interface IWorkerService
     {
         Task<ICollection<Worker>> GetAllAsync();
-        Task<ApiResponse<WorkerCreateResponseDTO>> CreateAsync(WorkerCreateDTO workerCreateDTO);
+        Task<ApiResponse<ResponseWorkerOutput>> CreateAsync(CreateWorkerInput workerCreateDTO);
         Task<PagedResult<Worker>> GetPaginatedAsync(PaginationParams @params);
-        Task<ApiResponse<bool>> UpdateAsync(int id, WorkerUpdateDTO workerUpdateDTO);
+        Task<ApiResponse<bool>> UpdateAsync(int id, UpdateWorkerInput workerUpdateDTO);
         Task<ApiResponse<bool>> DeleteAsync(int id);
-        Task<ApiResponse<WorkerDTO>> GetByIdAsync(int id);
-        Task<ICollection<WorkerDTO>> SearchProductsAsync(WorkerSearchDTO workerSearchDTO);
+        Task<ApiResponse<CreateWorkerOutput>> GetByIdAsync(int id);
+        Task<ICollection<CreateWorkerOutput>> SearchProductsAsync(SearchWorkerInput workerSearchDTO);
     }
 }

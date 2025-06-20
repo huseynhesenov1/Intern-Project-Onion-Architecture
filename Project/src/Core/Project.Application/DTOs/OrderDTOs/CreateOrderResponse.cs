@@ -1,6 +1,6 @@
 ﻿namespace Project.Application.DTOs.OrderDTOs
 {
-    public record OrderCreateResponseDTO
+    public record CreateOrderResponse
     {
         public decimal TotalPrice { get; set; }
     }

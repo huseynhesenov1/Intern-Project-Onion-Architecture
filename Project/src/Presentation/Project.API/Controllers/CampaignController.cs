@@ -17,39 +17,39 @@ namespace Project.API.Controllers
             _campaignService = campaignService;
         }
         [HttpGet]
-        public async Task<ICollection<CampaignReadDTO>> GetAll()
+        public async Task<ICollection<CampaignOutput>> GetAll()
         {
             return await _campaignService.GetAllAsync();
         }
         [HttpGet("{id}")]
-        public async Task<ApiResponse<CampaignReadDTO>> GetById(int id)
+        public async Task<ApiResponse<CampaignOutput>> GetById(int id)
         {
             return await _campaignService.GetByIdAsync(id);
         }
         [HttpPost]
-
-        public async Task<IActionResult> Create([FromBody] CampaignCreateDTO campaignCreateDTO)
+        public async Task<IActionResult> Create([FromBody] CreateCampaignInput input)
         {
-            var result = await _campaignService.CreateAsync(campaignCreateDTO);
-            if (!result.IsSuccess)
+            try
             {
-                return BadRequest(new
-                {
-                    error = result.Message,
-                    detail = result.ErrorDetail
-                });
-            }
+                var result = await _campaignService.CreateAsync(input);
 
-            return Ok(new
+                if (!result.IsSuccess)
+                    return BadRequest(result); 
+
+                return Ok(result); 
+            }
+            catch (Exception ex)
             {
-                id = result.Data,
-                message = result.Message
-            });
+                return StatusCode(500, ApiResponse<string>.Fail("Xəta baş verdi", ex.Message));
+            }
         }
 
 
+        
+
+
         [HttpPut("{Id}")]
-        public async Task<IActionResult> Update(int Id, [FromBody] CampaignUpdateDTO productUpdateDTO)
+        public async Task<IActionResult> Update(int Id, [FromBody] UpdateCampaignInput productUpdateDTO)
         {
             var response = await _campaignService.UpdateAsync(Id, productUpdateDTO);
 
@@ -70,20 +70,61 @@ namespace Project.API.Controllers
             return Ok(result);
         }
 
+       
+
         [HttpDelete("{id}")]
-        public async Task<ApiResponse<bool>> Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            return await _campaignService.DeleteAsync(id);
+            try
+            {
+                var result = await _campaignService.DeleteAsync(id);
+
+                if (!result.IsSuccess)
+                    return NotFound(result);
+
+                return Ok(result); 
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponse<bool>.Fail( "Server xətası baş verdi", ex.Message));
+            }
         }
-        [HttpPut("{id}Enable")]
-        public async Task<ApiResponse<bool>> Enable(int id)
+        [HttpPut("{id}/Enable")]
+        public async Task<IActionResult> Enable(int id)
         {
-            return await _campaignService.EnableAsync(id);
+            try
+            {
+                var result = await _campaignService.EnableAsync(id);
+
+                if (!result.IsSuccess)
+                    return BadRequest(result);  
+
+                return Ok(result);  
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(500, ApiResponse<bool>.Fail( "Server xətası baş verdi", ex.Message));
+            }
+            
         }
-        [HttpPut("{id}Disable")]
-        public async Task<ApiResponse<bool>> Disable(int id)
+        [HttpPut("{id}/Disable")]
+        public async Task<IActionResult> Disable(int id)
         {
-            return await _campaignService.DisableAsync(id);
+            try
+            {
+                var result = await _campaignService.DisableAsync(id);
+
+                if (!result.IsSuccess)
+                    return BadRequest(result);
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(500, ApiResponse<bool>.Fail("Server xətası baş verdi", ex.Message));
+            }
         }
 
     }

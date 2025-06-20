@@ -7,12 +7,12 @@ namespace Project.Application.Abstractions.Services.InternalServices
 {
     public interface IProductService
     {
-        Task<int> CreateAsync(ProductCreateDTO productCreateDTO);
-        Task<int> UpdateAsync(int Id, ProductUpdateDTO productUpdateDTO);
-        Task<ICollection<ProductReadDTO>> GetAllAsync();
+        Task<int> CreateAsync(CreateProductInput productCreateDTO);
+        Task<int> UpdateAsync(int Id, UpdateProductInput productUpdateDTO);
+        Task<ICollection<CreateProductOutput>> GetAllAsync();
         Task<PagedResult<Product>> GetPaginatedAsync(PaginationParams @params);
         Task<ApiResponse<bool>> DeleteAsync(int id);
-        Task<ApiResponse<ProductReadDTO>> GetByIdAsync(int id);
-        Task<ICollection<ProductReadDTO>> SearchProductsAsync(string title);
+        Task<ApiResponse<CreateProductOutput>> GetByIdAsync(int id);
+        Task<ICollection<CreateProductOutput>> SearchProductsAsync(string title);
     }
 }

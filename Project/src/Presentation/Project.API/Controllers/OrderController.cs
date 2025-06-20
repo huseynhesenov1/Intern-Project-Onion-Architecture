@@ -16,7 +16,7 @@ namespace Project.API.Controllers
             _orderService = orderService;
         }
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] OrderCreateDTO orderCreateDTO)
+        public async Task<IActionResult> Create([FromBody] CreateOrderInput orderCreateDTO)
         {
             try
             {

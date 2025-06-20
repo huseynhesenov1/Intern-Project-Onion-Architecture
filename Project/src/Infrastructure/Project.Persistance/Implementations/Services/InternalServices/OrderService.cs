@@ -31,32 +31,32 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             _workerReadRepository = workerReadRepository;
         }
 
-        public async Task<ApiResponse<OrderCreateResponseDTO>> CreateAsync(OrderCreateDTO dto)
+        public async Task<ApiResponse<CreateOrderResponse>> CreateAsync(CreateOrderInput dto)
         {
             try
             {
                 var workerIdClaim = _httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier);
                 if (workerIdClaim == null)
                 {
-                    return new ApiResponse<OrderCreateResponseDTO> { IsSuccess = false, Message = "Unauthorized" };
+                    return new ApiResponse<CreateOrderResponse> { IsSuccess = false, Message = "Unauthorized" };
                 }
 
                 var workerId = int.Parse(workerIdClaim.Value);
                 var worker = await _workerReadRepository.GetByIdAsync(workerId, true, "District");
                 if (worker == null)
                 {
-                    return new ApiResponse<OrderCreateResponseDTO> { IsSuccess = false, Message = "Worker not found" };
+                    return new ApiResponse<CreateOrderResponse> { IsSuccess = false, Message = "Worker not found" };
                 }
 
                 var product = await _productReadRepository.GetByIdAsync(dto.ProductId, true, "ProductDistrictPrices");
                 if (product == null)
                 {
-                    return new ApiResponse<OrderCreateResponseDTO> { IsSuccess = false, Message = "Product not found" };
+                    return new ApiResponse<CreateOrderResponse> { IsSuccess = false, Message = "Product not found" };
                 }
 
                 decimal finalPrice = product.Price;
 
-                var campaigns = await _campaignReadRepository.GetAllAsync(false);
+                var campaigns = await _campaignReadRepository.GetAllAsync(false, false);
                 var activeCampaign = campaigns.FirstOrDefault(c =>
                     c.IsActive &&
                     DateTime.UtcNow >= c.StartDate &&
@@ -89,10 +89,10 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                 await _orderWriteRepository.CreateAsync(order);
                 await _orderWriteRepository.SaveChangeAsync();
 
-                return new ApiResponse<OrderCreateResponseDTO>
+                return new ApiResponse<CreateOrderResponse>
                 {
                     IsSuccess = true,
-                    Data = new OrderCreateResponseDTO
+                    Data = new CreateOrderResponse
                     {
                         TotalPrice = totalPrice
                     }
@@ -100,7 +100,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             }
             catch (Exception ex)
             {
-                return new ApiResponse<OrderCreateResponseDTO>
+                return new ApiResponse<CreateOrderResponse>
                 {
                     IsSuccess = false,
                     Message = ex.Message
@@ -109,10 +109,10 @@ namespace Project.Persistance.Implementations.Services.InternalServices
         }
 
 
-        public async Task<PagedResult<OrderReadDTO>> GetPaginatedAsync(PaginationParams @params)
+        public async Task<PagedResult<CreateOrderOutput>> GetPaginatedAsync(PaginationParams @params)
         {
-            var orders = await _orderReadRepository.GetAllAsync(false, "Product");
-            var campaigns = await _campaignReadRepository.GetAllAsync(false);
+            var orders = await _orderReadRepository.GetAllAsync(false, false, o=>o.Product);
+            var campaigns = await _campaignReadRepository.GetAllAsync(false, false);
 
             var orderDTOs = orders.Select(o =>
             {
@@ -121,7 +121,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                     c.StartDate <= o.CreatedAt &&
                     c.EndDate >= o.CreatedAt);
 
-                return new OrderReadDTO
+                return new CreateOrderOutput
                 {
                     Id = o.Id,
                     ProductId = o.ProductId,
@@ -142,23 +142,23 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                 .Take(@params.PageSize)
                 .ToList();
 
-            return new PagedResult<OrderReadDTO>(paginatedDTOs, totalCount, @params.PageNumber, @params.PageSize);
+            return new PagedResult<CreateOrderOutput>(paginatedDTOs, totalCount, @params.PageNumber, @params.PageSize);
         }
 
 
-        public async Task<ICollection<OrderReadDTO>> GetAllAsync()
+        public async Task<ICollection<CreateOrderOutput>> GetAllAsync()
         {
-            var orders = await _orderReadRepository.GetAllAsync(false, "Product");
-            var campaigns = await _campaignReadRepository.GetAllAsync(false);
-
+            var orders = await _orderReadRepository.GetAllAsync(false, false, o=>o.Product);
+            var campaigns = await _campaignReadRepository.GetAllAsync(false , false);
+            
             return orders.Select(o =>
             {
                 var activeCampaign = campaigns.FirstOrDefault(c =>
-                    c.IsActive &&
+                   
                     c.StartDate <= o.CreatedAt &&
                     c.EndDate >= o.CreatedAt);
 
-                return new OrderReadDTO
+                return new CreateOrderOutput
                 {
                     Id = o.Id,
                     ProductId = o.ProductId,
@@ -171,13 +171,6 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                     CreatedAt = o.CreatedAt
                 };
             }).ToList();
-        }
-
-
-
-        Task<ICollection<OrderReadDTO>> IOrderService.GetAllAsync()
-        {
-            throw new NotImplementedException();
         }
     }
 }

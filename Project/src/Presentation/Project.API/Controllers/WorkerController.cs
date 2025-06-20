@@ -22,7 +22,7 @@ namespace Project.API.Controllers
 
 
         [HttpPost]
-        public async Task<ApiResponse<WorkerCreateResponseDTO>> Create([FromBody] WorkerCreateDTO workerCreateDTO)
+        public async Task<ApiResponse<ResponseWorkerOutput>> Create([FromBody] CreateWorkerInput workerCreateDTO)
         {
             try
             {
@@ -31,12 +31,12 @@ namespace Project.API.Controllers
             }
             catch (Exception ex)
             {
-                return ApiResponse<WorkerCreateResponseDTO>.Fail(ex.Message, "Error");
+                return ApiResponse<ResponseWorkerOutput>.Fail(ex.Message, "Error");
             }
         }
 
         [HttpPut("{id}")]
-        public async Task<ApiResponse<bool>> Update(int id, [FromBody] WorkerUpdateDTO workerUpdateDTO)
+        public async Task<ApiResponse<bool>> Update(int id, [FromBody] UpdateWorkerInput workerUpdateDTO)
         {
             return await _workerService.UpdateAsync(id, workerUpdateDTO);
         }
@@ -54,14 +54,14 @@ namespace Project.API.Controllers
             return Ok(result);
         }
         [HttpGet("Search")]
-        public async Task<IActionResult> GetSearch([FromQuery] WorkerSearchDTO workerSearchDTO)
+        public async Task<IActionResult> GetSearch([FromQuery] SearchWorkerInput workerSearchDTO)
         {
             var result = await _workerService.SearchProductsAsync(workerSearchDTO);
             return Ok(result);
         }
 
         [HttpGet("{id}")]
-        public async Task<ApiResponse<WorkerDTO>> GetById(int id)
+        public async Task<ApiResponse<CreateWorkerOutput>> GetById(int id)
         {
             return await _workerService.GetByIdAsync(id);
         }

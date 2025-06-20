@@ -7,7 +7,6 @@ public interface IWriteRepository<T> : IRepository<T> where T : BaseAuditableEnt
     Task<T> CreateAsync(T tentity);
     T Update(T tentity);
     T SoftDelete(T tentity);
-    T HardDelete(T tentity);
     T Restore(T tentity);
     Task SaveChangeAsync();
 }

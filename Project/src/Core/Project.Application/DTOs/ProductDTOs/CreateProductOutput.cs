@@ -1,6 +1,6 @@
 ﻿namespace Project.Application.DTOs.ProductDTOs
 {
-    public record ProductReadDTO
+    public record CreateProductOutput
     {
         public int Id { get; set; }
         public string Title { get; set; }

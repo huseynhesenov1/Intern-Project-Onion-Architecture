@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.ICollection\u00601[[Project.Application.DTOs.Campaign.CampaignReadDTO, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.ICollection\u00601[[Project.Application.DTOs.Campaign.CampaignOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -28,8 +28,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "campaignCreateDTO",
-        "Type": "Project.Application.DTOs.Campaign.CampaignCreateDTO",
+        "Name": "input",
+        "Type": "Project.Application.DTOs.Campaign.CreateCampaignInput",
         "IsRequired": true
       }
     ],
@@ -51,7 +51,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[Project.Application.DTOs.Campaign.CampaignReadDTO, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Project.Application.Models.ApiResponse\u00601[[Project.Application.DTOs.Campaign.CampaignOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -75,17 +75,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Project.API.Controllers.CampaignController",
@@ -102,7 +92,7 @@
       },
       {
         "Name": "productUpdateDTO",
-        "Type": "Project.Application.DTOs.Campaign.CampaignUpdateDTO",
+        "Type": "Project.Application.DTOs.Campaign.UpdateCampaignInput",
         "IsRequired": true
       }
     ],
@@ -111,7 +101,7 @@
   {
     "ContainingType": "Project.API.Controllers.CampaignController",
     "Method": "Disable",
-    "RelativePath": "api/Campaign/{id}Disable",
+    "RelativePath": "api/Campaign/{id}/Disable",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -122,22 +112,12 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Project.API.Controllers.CampaignController",
     "Method": "Enable",
-    "RelativePath": "api/Campaign/{id}Enable",
+    "RelativePath": "api/Campaign/{id}/Enable",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -148,17 +128,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Project.API.Controllers.CampaignController",
@@ -191,7 +161,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.ICollection\u00601[[Project.Application.DTOs.DistrictDTOs.DistrictReadDTO, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.ICollection\u00601[[Project.Application.DTOs.DistrictDTOs.CreateDistrictOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -280,7 +250,7 @@
     "Parameters": [
       {
         "Name": "orderCreateDTO",
-        "Type": "Project.Application.DTOs.OrderDTOs.OrderCreateDTO",
+        "Type": "Project.Application.DTOs.OrderDTOs.CreateOrderInput",
         "IsRequired": true
       }
     ],
@@ -327,7 +297,7 @@
     "Parameters": [
       {
         "Name": "productCreateDTO",
-        "Type": "Project.Application.DTOs.ProductDTOs.ProductCreateDTO",
+        "Type": "Project.Application.DTOs.ProductDTOs.CreateProductInput",
         "IsRequired": true
       }
     ],
@@ -353,7 +323,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.ICollection\u00601[[Project.Application.DTOs.ProductDTOs.ProductReadDTO, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.ICollection\u00601[[Project.Application.DTOs.ProductDTOs.CreateProductOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -379,7 +349,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[Project.Application.DTOs.ProductDTOs.ProductReadDTO, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Project.Application.Models.ApiResponse\u00601[[Project.Application.DTOs.ProductDTOs.CreateProductOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -430,7 +400,7 @@
       },
       {
         "Name": "productUpdateDTO",
-        "Type": "Project.Application.DTOs.ProductDTOs.ProductUpdateDTO",
+        "Type": "Project.Application.DTOs.ProductDTOs.UpdateProductInput",
         "IsRequired": true
       }
     ],
@@ -493,7 +463,7 @@
     "Parameters": [
       {
         "Name": "productDistrictPriceCreateDTO",
-        "Type": "Project.Application.DTOs.ProductDistrictPriceDTOs.ProductDistrictPriceCreateDTO",
+        "Type": "Project.Application.DTOs.ProductDistrictPriceDTOs.CreateProductDistrictPriceInput",
         "IsRequired": true
       }
     ],
@@ -519,13 +489,13 @@
     "Parameters": [
       {
         "Name": "workerCreateDTO",
-        "Type": "Project.Application.DTOs.WorkerDTOs.WorkerCreateDTO",
+        "Type": "Project.Application.DTOs.WorkerDTOs.CreateWorkerInput",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[Project.Application.DTOs.WorkerDTOs.WorkerCreateResponseDTO, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Project.Application.Models.ApiResponse\u00601[[Project.Application.DTOs.WorkerDTOs.ResponseWorkerOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -550,7 +520,7 @@
       },
       {
         "Name": "workerUpdateDTO",
-        "Type": "Project.Application.DTOs.WorkerDTOs.WorkerUpdateDTO",
+        "Type": "Project.Application.DTOs.WorkerDTOs.UpdateWorkerInput",
         "IsRequired": true
       }
     ],
@@ -582,7 +552,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[Project.Application.DTOs.WorkerDTOs.WorkerDTO, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Project.Application.Models.ApiResponse\u00601[[Project.Application.DTOs.WorkerDTOs.CreateWorkerOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
