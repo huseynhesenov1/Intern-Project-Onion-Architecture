@@ -1,131 +1,157 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Project.Application.Abstractions.Services.InternalServices;
 using Project.Application.DTOs.Campaign;
+using Project.Application.Exceptions;
 using Project.Application.Models;
+using Project.Domain.Entities;
 using Project.Domain.Entities.Commons;
+//using Project.Domain.Exceptions;
 
-namespace Project.API.Controllers
+namespace Project.API.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class CampaignController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CampaignController : ControllerBase
+    private readonly ICampaignService _campaignService;
+
+    public CampaignController(ICampaignService campaignService)
     {
-        private readonly ICampaignService _campaignService;
-        public CampaignController(ICampaignService campaignService)
+        _campaignService = campaignService;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAll()
+    {
+        var result = await _campaignService.GetAllAsync();
+        return Ok(ApiResponse<ICollection<CampaignOutput>>.Success(result, "Uğurla alındı"));
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        try
         {
-            _campaignService = campaignService;
+            var result = await _campaignService.GetByIdAsync(id);
+            return Ok(ApiResponse<CampaignOutput>.Success(result, "Uğurlu"));
         }
-        [HttpGet]
-        public async Task<ICollection<CampaignOutput>> GetAll()
+        catch (CampaignNotFoundException ex)
         {
-            return await _campaignService.GetAllAsync();
+            return NotFound(ApiResponse<CampaignOutput>.Fail("Tapılmadı", ex.Message));
         }
-        [HttpGet("{id}")]
-        public async Task<ApiResponse<CampaignOutput>> GetById(int id)
+        catch (Exception ex)
         {
-            return await _campaignService.GetByIdAsync(id);
+            return StatusCode(500, ApiResponse<string>.Fail("Xəta baş verdi", ex.Message));
         }
-        [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateCampaignInput input)
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] CreateCampaignInput input)
+    {
+        try
         {
-            try
-            {
-                var result = await _campaignService.CreateAsync(input);
-
-                if (!result.IsSuccess)
-                    return BadRequest(result); 
-
-                return Ok(result); 
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ApiResponse<string>.Fail("Xəta baş verdi", ex.Message));
-            }
+            var result = await _campaignService.CreateAsync(input);
+            return Ok(ApiResponse<int>.Success(result, "Kampaniya yaradıldı"));
         }
-
-
-        
-
-
-        [HttpPut("{Id}")]
-        public async Task<IActionResult> Update(int Id, [FromBody] UpdateCampaignInput productUpdateDTO)
+        catch (CampaignConflictException ex)
         {
-            var response = await _campaignService.UpdateAsync(Id, productUpdateDTO);
-
-            if (!response.IsSuccess)
-            {
-                return BadRequest(response);
-            }
-
-            return Ok(response);
+            return BadRequest(ApiResponse<int>.Fail("Tarix konflikti", ex.Message));
         }
-
-
-
-        [HttpGet("Paginated")]
-        public async Task<IActionResult> GetPaginated([FromQuery] PaginationParams @params)
+        catch (Exception ex)
         {
-            var result = await _campaignService.GetPaginatedAsync(@params);
-            return Ok(result);
+            return StatusCode(500, ApiResponse<string>.Fail("Xəta baş verdi", ex.Message));
         }
+    }
 
-       
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] UpdateCampaignInput input)
+    {
+        try
         {
-            try
-            {
-                var result = await _campaignService.DeleteAsync(id);
-
-                if (!result.IsSuccess)
-                    return NotFound(result);
-
-                return Ok(result); 
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ApiResponse<bool>.Fail( "Server xətası baş verdi", ex.Message));
-            }
+            var result = await _campaignService.UpdateAsync(id, input);
+            return Ok(ApiResponse<int>.Success(result, "Yeniləndi"));
         }
-        [HttpPut("{id}/Enable")]
-        public async Task<IActionResult> Enable(int id)
+        catch (CampaignNotFoundException ex)
         {
-            try
-            {
-                var result = await _campaignService.EnableAsync(id);
-
-                if (!result.IsSuccess)
-                    return BadRequest(result);  
-
-                return Ok(result);  
-            }
-            catch (Exception ex)
-            {
-
-                return StatusCode(500, ApiResponse<bool>.Fail( "Server xətası baş verdi", ex.Message));
-            }
-            
+            return NotFound(ApiResponse<int>.Fail("Tapılmadı", ex.Message));
         }
-        [HttpPut("{id}/Disable")]
-        public async Task<IActionResult> Disable(int id)
+        catch (CampaignConflictException ex)
         {
-            try
-            {
-                var result = await _campaignService.DisableAsync(id);
-
-                if (!result.IsSuccess)
-                    return BadRequest(result);
-
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-
-                return StatusCode(500, ApiResponse<bool>.Fail("Server xətası baş verdi", ex.Message));
-            }
+            return BadRequest(ApiResponse<int>.Fail("Tarix konflikti", ex.Message));
         }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ApiResponse<string>.Fail("Xəta baş verdi", ex.Message));
+        }
+    }
 
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        try
+        {
+            await _campaignService.DeleteAsync(id);
+            return Ok(ApiResponse<bool>.Success(true, "Silindi"));
+        }
+        catch (CampaignNotFoundException ex)
+        {
+            return NotFound(ApiResponse<bool>.Fail("Tapılmadı", ex.Message));
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ApiResponse<string>.Fail("Server xətası baş verdi", ex.Message));
+        }
+    }
+
+    [HttpPut("{id}/Enable")]
+    public async Task<IActionResult> Enable(int id)
+    {
+        try
+        {
+            await _campaignService.EnableAsync(id);
+            return Ok(ApiResponse<bool>.Success(true, "Aktiv edildi"));
+        }
+        catch (CampaignNotFoundException ex)
+        {
+            return NotFound(ApiResponse<bool>.Fail("Tapılmadı", ex.Message));
+        }
+        catch (InvalidOperationException ex)
+        {
+            return BadRequest(ApiResponse<bool>.Fail("Əməliyyat xətası", ex.Message));
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ApiResponse<string>.Fail("Server xətası baş verdi", ex.Message));
+        }
+    }
+
+    [HttpPut("{id}/Disable")]
+    public async Task<IActionResult> Disable(int id)
+    {
+        try
+        {
+            await _campaignService.DisableAsync(id);
+            return Ok(ApiResponse<bool>.Success(true, "Deaktiv edildi"));
+        }
+        catch (CampaignNotFoundException ex)
+        {
+            return NotFound(ApiResponse<bool>.Fail("Tapılmadı", ex.Message));
+        }
+        catch (InvalidOperationException ex)
+        {
+            return BadRequest(ApiResponse<bool>.Fail("Əməliyyat xətası", ex.Message));
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ApiResponse<string>.Fail("Server xətası baş verdi", ex.Message));
+        }
+    }
+
+    [HttpGet("Paginated")]
+    public async Task<IActionResult> GetPaginated([FromQuery] PaginationParams @params)
+    {
+        var result = await _campaignService.GetPaginatedAsync(@params);
+        return Ok(ApiResponse<PagedResult<Campaign>>.Success(result, "Paged nəticələr"));
     }
 }
+

@@ -7,17 +7,7 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.ICollection\u00601[[Project.Application.DTOs.Campaign.CampaignOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Project.API.Controllers.CampaignController",
@@ -49,17 +39,28 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Project.API.Controllers.CampaignController",
+    "Method": "Update",
+    "RelativePath": "api/Campaign/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[Project.Application.DTOs.Campaign.CampaignOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "input",
+        "Type": "Project.Application.DTOs.Campaign.UpdateCampaignInput",
+        "IsRequired": true
       }
-    ]
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Project.API.Controllers.CampaignController",
@@ -72,27 +73,6 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Project.API.Controllers.CampaignController",
-    "Method": "Update",
-    "RelativePath": "api/Campaign/{Id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "productUpdateDTO",
-        "Type": "Project.Application.DTOs.Campaign.UpdateCampaignInput",
         "IsRequired": true
       }
     ],
@@ -480,7 +460,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Project.API.Controllers.WorkerController",
+    "ContainingType": "WorkerController",
     "Method": "Create",
     "RelativePath": "api/Worker",
     "HttpMethod": "POST",
@@ -488,25 +468,15 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "workerCreateDTO",
+        "Name": "input",
         "Type": "Project.Application.DTOs.WorkerDTOs.CreateWorkerInput",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[Project.Application.DTOs.WorkerDTOs.ResponseWorkerOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "Project.API.Controllers.WorkerController",
+    "ContainingType": "WorkerController",
     "Method": "Update",
     "RelativePath": "api/Worker/{id}",
     "HttpMethod": "PUT",
@@ -519,25 +489,15 @@
         "IsRequired": true
       },
       {
-        "Name": "workerUpdateDTO",
+        "Name": "input",
         "Type": "Project.Application.DTOs.WorkerDTOs.UpdateWorkerInput",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "Project.API.Controllers.WorkerController",
+    "ContainingType": "WorkerController",
     "Method": "GetById",
     "RelativePath": "api/Worker/{id}",
     "HttpMethod": "GET",
@@ -550,20 +510,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[Project.Application.DTOs.WorkerDTOs.CreateWorkerOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "Project.API.Controllers.WorkerController",
+    "ContainingType": "WorkerController",
     "Method": "Delete",
     "RelativePath": "api/Worker/{id}",
     "HttpMethod": "DELETE",
@@ -576,40 +526,20 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "Project.API.Controllers.WorkerController",
+    "ContainingType": "WorkerController",
     "Method": "GetAllWorkers",
     "RelativePath": "api/Worker/all",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.ICollection\u00601[[Project.Domain.Entities.Worker, Project.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "Project.API.Controllers.WorkerController",
+    "ContainingType": "WorkerController",
     "Method": "GetPaginated",
     "RelativePath": "api/Worker/Paginated",
     "HttpMethod": "GET",
@@ -630,7 +560,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Project.API.Controllers.WorkerController",
+    "ContainingType": "WorkerController",
     "Method": "GetSearch",
     "RelativePath": "api/Worker/Search",
     "HttpMethod": "GET",

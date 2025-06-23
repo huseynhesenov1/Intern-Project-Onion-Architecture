@@ -1,79 +1,96 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Project.Application.Abstractions.Services.InternalServices;
 using Project.Application.DTOs.WorkerDTOs;
 using Project.Application.Models;
 using Project.Domain.Entities;
 using Project.Domain.Entities.Commons;
 
-namespace Project.API.Controllers
+[ApiController]
+[Route("api/[controller]")]
+public class WorkerController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class WorkerController : ControllerBase
+    private readonly IWorkerService _workerService;
+
+    public WorkerController(IWorkerService workerService)
     {
-        private readonly IWorkerService _workerService;
+        _workerService = workerService;
+    }
 
-        public WorkerController(IWorkerService workerService)
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] CreateWorkerInput input)
+    {
+        try
         {
-            _workerService = workerService;
+            var result = await _workerService.CreateAsync(input);
+            return Ok(ApiResponse<ResponseWorkerOutput>.Success(result, "Worker created successfully"));
         }
-
-
-
-        [HttpPost]
-        public async Task<ApiResponse<ResponseWorkerOutput>> Create([FromBody] CreateWorkerInput workerCreateDTO)
+        catch (Exception ex)
         {
-            try
-            {
-                return await _workerService.CreateAsync(workerCreateDTO);
-
-            }
-            catch (Exception ex)
-            {
-                return ApiResponse<ResponseWorkerOutput>.Fail(ex.Message, "Error");
-            }
+            return BadRequest(ApiResponse<ResponseWorkerOutput>.Fail(ex.Message, "Creation failed"));
         }
+    }
 
-        [HttpPut("{id}")]
-        public async Task<ApiResponse<bool>> Update(int id, [FromBody] UpdateWorkerInput workerUpdateDTO)
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] UpdateWorkerInput input)
+    {
+        try
         {
-            return await _workerService.UpdateAsync(id, workerUpdateDTO);
+            await _workerService.UpdateAsync(id, input);
+            return Ok(ApiResponse<bool>.Success(true, "Updated successfully"));
         }
-
-        [HttpGet("all")]
-        public async Task<ICollection<Worker>> GetAllWorkers()
+        catch (Exception ex)
         {
-            return await _workerService.GetAllAsync();
+            return BadRequest(ApiResponse<bool>.Fail(ex.Message, "Update failed"));
         }
+    }
 
-        [HttpGet("Paginated")]
-        public async Task<IActionResult> GetPaginated([FromQuery] PaginationParams @params)
+    [HttpGet("all")]
+    public async Task<IActionResult> GetAllWorkers()
+    {
+        var result = await _workerService.GetAllAsync();
+        return Ok(ApiResponse<ICollection<Worker>>.Success(result, "List retrieved"));
+    }
+
+    [HttpGet("Paginated")]
+    public async Task<IActionResult> GetPaginated([FromQuery] PaginationParams @params)
+    {
+        var result = await _workerService.GetPaginatedAsync(@params);
+        return Ok(ApiResponse<PagedResult<Worker>>.Success(result, "Paginated list"));
+    }
+
+    [HttpGet("Search")]
+    public async Task<IActionResult> GetSearch([FromQuery] SearchWorkerInput input)
+    {
+        var result = await _workerService.SearchProductsAsync(input);
+        return Ok(ApiResponse<ICollection<CreateWorkerOutput>>.Success(result, "Search result"));
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        try
         {
-            var result = await _workerService.GetPaginatedAsync(@params);
-            return Ok(result);
+            var result = await _workerService.GetByIdAsync(id);
+            return Ok(ApiResponse<CreateWorkerOutput>.Success(result, "Retrieved successfully"));
         }
-        [HttpGet("Search")]
-        public async Task<IActionResult> GetSearch([FromQuery] SearchWorkerInput workerSearchDTO)
+        catch (Exception ex)
         {
-            var result = await _workerService.SearchProductsAsync(workerSearchDTO);
-            return Ok(result);
+            return NotFound(ApiResponse<CreateWorkerOutput>.Fail(ex.Message, "Worker not found"));
         }
+    }
 
-        [HttpGet("{id}")]
-        public async Task<ApiResponse<CreateWorkerOutput>> GetById(int id)
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        try
         {
-            return await _workerService.GetByIdAsync(id);
+            await _workerService.DeleteAsync(id);
+            return Ok(ApiResponse<bool>.Success(true, "Deleted successfully"));
         }
-
-
-
-        [HttpDelete("{id}")]
-        public async Task<ApiResponse<bool>> Delete(int id)
+        catch (Exception ex)
         {
-            return await _workerService.DeleteAsync(id);
+            return NotFound(ApiResponse<bool>.Fail(ex.Message, "Delete failed"));
         }
-
-
     }
 }
+
