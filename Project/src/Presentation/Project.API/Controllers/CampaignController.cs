@@ -5,7 +5,6 @@ using Project.Application.Exceptions;
 using Project.Application.Models;
 using Project.Domain.Entities;
 using Project.Domain.Entities.Commons;
-//using Project.Domain.Exceptions;
 
 namespace Project.API.Controllers;
 

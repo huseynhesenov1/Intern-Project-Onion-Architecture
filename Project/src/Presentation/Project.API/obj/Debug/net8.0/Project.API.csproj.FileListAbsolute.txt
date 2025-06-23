@@ -301,3 +301,6 @@ C:\Users\ACER\Desktop\Intern Project Onion\Project\src\Presentation\Project.API\
 C:\Users\ACER\Desktop\Intern Project Onion\Project\src\Presentation\Project.API\obj\Debug\net8.0\Project.API.pdb
 C:\Users\ACER\Desktop\Intern Project Onion\Project\src\Presentation\Project.API\obj\Debug\net8.0\Project.API.genruntimeconfig.cache
 C:\Users\ACER\Desktop\Intern Project Onion\Project\src\Presentation\Project.API\obj\Debug\net8.0\ref\Project.API.dll
+C:\Users\ACER\Desktop\Intern Project Onion\Project\src\Presentation\Project.API\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\ACER\Desktop\Intern Project Onion\Project\src\Presentation\Project.API\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\ACER\Desktop\Intern Project Onion\Project\src\Presentation\Project.API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll

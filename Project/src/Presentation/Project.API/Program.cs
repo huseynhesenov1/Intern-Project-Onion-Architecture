@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Project.API.Extensions;
+using FluentValidation.AspNetCore;
+using Project.Application.DTOs.WorkerDTOs;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -32,6 +34,8 @@ builder.Services.AddAuthentication(options =>
     };
 });
 builder.Services.AddDbContext<AppDbContext>(opt=>opt.UseSqlServer(builder.Configuration.GetConnectionString("MsSQL")));
+builder.Services.AddControllers()
+    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<WorkerCreateDTOValidator>());
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
