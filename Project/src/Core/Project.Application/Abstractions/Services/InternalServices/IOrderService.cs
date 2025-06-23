@@ -6,7 +6,7 @@ namespace Project.Application.Abstractions.Services.InternalServices
 {
     public interface IOrderService
     {
-        Task<ApiResponse<CreateOrderResponse>> CreateAsync(CreateOrderInput dto);
+        Task<CreateOrderResponse> CreateAsync(CreateOrderInput dto);
         Task<ICollection<CreateOrderOutput>> GetAllAsync();
         Task<PagedResult<CreateOrderOutput>> GetPaginatedAsync(PaginationParams @params);
     }

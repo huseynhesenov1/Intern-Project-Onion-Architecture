@@ -13,6 +13,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
         private readonly IProductReadRepository _productReadRepository;
         private readonly IProductWriteRepository _productWriteRepository;
         private readonly ICampaignReadRepository _campaignReadRepository;
+
         public ProductService(IProductWriteRepository productWriteRepository, IProductReadRepository productReadRepository, ICampaignReadRepository campaignReadRepository)
         {
             _productWriteRepository = productWriteRepository;
@@ -22,36 +23,32 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<int> CreateAsync(CreateProductInput productCreateDTO)
         {
-            Product product = new Product()
+            var product = new Product
             {
-                Price = productCreateDTO.Price,
                 Title = productCreateDTO.Title,
+                Price = productCreateDTO.Price,
+                CreatedAt = DateTime.UtcNow.AddHours(4)
             };
-            product.CreatedAt = DateTime.UtcNow.AddHours(4);
-            await _productWriteRepository.CreateAsync(product);
+            var result = await _productWriteRepository.CreateAsync(product);
+            if (result == null)
+                throw new Exception("Product could not be created.");
+
             await _productWriteRepository.SaveChangeAsync();
             return product.Id;
         }
 
-        public async Task<int> UpdateAsync(int Id, UpdateProductInput productUpdateDTO)
+        public async Task<int> UpdateAsync(int id, UpdateProductInput productUpdateDTO)
         {
-            Product product = await _productReadRepository.GetByIdAsync(Id, false);
-            if (product == null)
-            {
-                throw new Exception("Invalid ID");
-            }
-            Product newProduct = new Product()
-            {
-                Price = productUpdateDTO.Price,
-                Title = productUpdateDTO.Title,
-            };
-            newProduct.Id = Id;
-            newProduct.UpdatedAt = DateTime.UtcNow.AddHours(4);
-            _productWriteRepository.Update(newProduct);
+            var product = await _productReadRepository.GetByIdAsync(id, true);
+            if (product == null || product.IsDeleted)
+                throw new Exception("Product not found");
+            product.Title = productUpdateDTO.Title;
+            product.Price = productUpdateDTO.Price;
+            product.UpdatedAt = DateTime.UtcNow.AddHours(4);
+            _productWriteRepository.Update(product);
             await _productWriteRepository.SaveChangeAsync();
-            return newProduct.Id;
+            return product.Id;
         }
-
 
         public async Task<ICollection<CreateProductOutput>> GetAllAsync()
         {
@@ -70,7 +67,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                 decimal newPrice = p.Price;
                 string campaignName = string.Empty;
                 int campaignId = -1;
-                //int distirctId = -1; // 
+                //int distirctId = -1; // Kampaniya ID
 
                 if (activeCampaign != null)
                 {
@@ -97,86 +94,53 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<PagedResult<Product>> GetPaginatedAsync(PaginationParams @params)
         {
-            var allCategories = await _productReadRepository.GetAllAsync(false, false);
-
-            var filtered = allCategories
-                .Skip((@params.PageNumber - 1) * @params.PageSize)
-                .Take(@params.PageSize)
-                .ToList();
-            int totalCount = allCategories.Count;
-            return new PagedResult<Product>(filtered, totalCount, @params.PageNumber, @params.PageSize);
+            var all = await _productReadRepository.GetAllAsync(false, false);
+            var filtered = all.Skip((@params.PageNumber - 1) * @params.PageSize).Take(@params.PageSize).ToList();
+            return new PagedResult<Product>(filtered, all.Count, @params.PageNumber, @params.PageSize);
         }
 
-        public async Task<ApiResponse<bool>> DeleteAsync(int id)
+        public async Task<CreateProductOutput> GetByIdAsync(int id)
         {
-            try
-            {
-                var product = await _productReadRepository.GetByIdAsync(id, true);
-                if (product == null || product.IsDeleted)
-                {
-                    return ApiResponse<bool>.Fail("Product not found", "Invalid Product ID");
-                }
+            var product = await _productReadRepository.GetByIdAsync(id, false);
+            if (product == null || product.IsDeleted)
+                throw new Exception("Product not found");
 
-                _productWriteRepository.SoftDelete(product);
-                await _productWriteRepository.SaveChangeAsync();
-
-                return ApiResponse<bool>.Success(true, "Product deleted successfully");
-            }
-            catch (Exception ex)
+            return new CreateProductOutput
             {
-                return ApiResponse<bool>.Fail(ex.Message, "Error deleting Product");
-            }
+                Id = product.Id,
+                Title = product.Title,
+                Price = product.Price,
+                OldPrice = product.Price,
+                CreatedAt = product.CreatedAt,
+                UpdatedAt = product.UpdatedAt
+            };
         }
 
-        public async Task<ApiResponse<CreateProductOutput>> GetByIdAsync(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
-            try
-            {
-                var product = await _productReadRepository.GetByIdAsync(id, false);
-                if (product == null || product.IsDeleted)
-                {
-                    return ApiResponse<CreateProductOutput>.Fail("Product not found", "Invalid Product ID");
-                }
-                CreateProductOutput productReadDTO = new CreateProductOutput()
-                {
-                    Id = product.Id,
-                    Title = product.Title,
-                    Price = product.Price,
-                    OldPrice = product.Price,
-                    CreatedAt = product.CreatedAt,
-                    UpdatedAt = product.UpdatedAt,
-
-                };
-
-                return ApiResponse<CreateProductOutput>.Success(productReadDTO, "Product retrieved successfully");
-            }
-            catch (Exception ex)
-            {
-                return ApiResponse<CreateProductOutput>.Fail(ex.Message, "Error retrieving Product");
-            }
+            var product = await _productReadRepository.GetByIdAsync(id, true);
+            if (product == null || product.IsDeleted)
+                throw new Exception("Product not found");
+            _productWriteRepository.SoftDelete(product);
+            await _productWriteRepository.SaveChangeAsync();
+            return true;
         }
 
         public async Task<ICollection<CreateProductOutput>> SearchProductsAsync(string title)
         {
-            var query = await _productReadRepository.GetAllAsync(false , false);
+            var products = await _productReadRepository.GetAllAsync(false, false);
 
-            query = query
-            .Where(p =>
-            (string.IsNullOrWhiteSpace(title) ||
-             p.Title.Contains(title, StringComparison.OrdinalIgnoreCase))).ToList();
-            var workerDTOs = query.Select(p => new CreateProductOutput
-            {
-                Id = p.Id,
-                Title = p.Title,
-                Price = p.Price,
-                OldPrice = p.Price,
-                CreatedAt = p.CreatedAt,
-                UpdatedAt = p.UpdatedAt,
-
-            }).ToList();
-            return workerDTOs;
+            return products
+                .Where(p => string.IsNullOrWhiteSpace(title) || p.Title.Contains(title, StringComparison.OrdinalIgnoreCase))
+                .Select(p => new CreateProductOutput
+                {
+                    Id = p.Id,
+                    Title = p.Title,
+                    Price = p.Price,
+                    OldPrice = p.Price,
+                    CreatedAt = p.CreatedAt,
+                    UpdatedAt = p.UpdatedAt
+                }).ToList();
         }
-
-
     }
 }

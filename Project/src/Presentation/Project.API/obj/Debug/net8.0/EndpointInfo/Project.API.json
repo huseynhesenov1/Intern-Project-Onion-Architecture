@@ -385,7 +385,24 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOrderResponseApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOrderResponseApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOrderResponseApiResponse"
+                }
+              }
+            }
           }
         }
       },
@@ -460,20 +477,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "integer",
-                  "format": "int32"
+                  "$ref": "#/components/schemas/Int32ApiResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "integer",
-                  "format": "int32"
+                  "$ref": "#/components/schemas/Int32ApiResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "integer",
-                  "format": "int32"
+                  "$ref": "#/components/schemas/Int32ApiResponse"
                 }
               }
             }
@@ -490,26 +504,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CreateProductOutput"
-                  }
+                  "$ref": "#/components/schemas/CreateProductOutputICollectionApiResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CreateProductOutput"
-                  }
+                  "$ref": "#/components/schemas/CreateProductOutputICollectionApiResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CreateProductOutput"
-                  }
+                  "$ref": "#/components/schemas/CreateProductOutputICollectionApiResponse"
                 }
               }
             }
@@ -558,20 +563,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "integer",
-                  "format": "int32"
+                  "$ref": "#/components/schemas/Int32ApiResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "integer",
-                  "format": "int32"
+                  "$ref": "#/components/schemas/Int32ApiResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "integer",
-                  "format": "int32"
+                  "$ref": "#/components/schemas/Int32ApiResponse"
                 }
               }
             }
@@ -703,7 +705,24 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateProductOutputICollectionApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateProductOutputICollectionApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateProductOutputICollectionApiResponse"
+                }
+              }
+            }
           }
         }
       }
@@ -1031,6 +1050,36 @@
         },
         "additionalProperties": false
       },
+      "CreateOrderResponse": {
+        "type": "object",
+        "properties": {
+          "totalPrice": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateOrderResponseApiResponse": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/CreateOrderResponse"
+          },
+          "errorDetail": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateProductDistrictPriceInput": {
         "type": "object",
         "properties": {
@@ -1122,6 +1171,30 @@
         },
         "additionalProperties": false
       },
+      "CreateProductOutputICollectionApiResponse": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateProductOutput"
+            },
+            "nullable": true
+          },
+          "errorDetail": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateWorkerInput": {
         "type": "object",
         "properties": {
@@ -1140,6 +1213,27 @@
           "districtId": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Int32ApiResponse": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "errorDetail": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

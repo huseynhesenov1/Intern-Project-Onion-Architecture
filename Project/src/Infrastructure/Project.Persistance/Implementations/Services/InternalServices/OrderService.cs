@@ -30,83 +30,63 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             _productReadRepository = productReadRepository;
             _workerReadRepository = workerReadRepository;
         }
-
-        public async Task<ApiResponse<CreateOrderResponse>> CreateAsync(CreateOrderInput dto)
+        public async Task<CreateOrderResponse> CreateAsync(CreateOrderInput dto)
         {
-            try
+            var workerIdClaim = _httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier);
+            if (workerIdClaim == null)
+                throw new Exception("Unauthorized");
+
+            var workerId = int.Parse(workerIdClaim.Value);
+            var worker = await _workerReadRepository.GetByIdAsync(workerId, true, "District");
+            if (worker == null)
+                throw new Exception("Worker not found");
+
+            var product = await _productReadRepository.GetByIdAsync(dto.ProductId, true, "ProductDistrictPrices");
+            if (product == null)
+                throw new Exception("Product not found");
+
+            decimal finalPrice = product.Price;
+
+            var campaigns = await _campaignReadRepository.GetAllAsync(false, false);
+            var activeCampaign = campaigns.FirstOrDefault(c =>
+                c.IsActive &&
+                DateTime.UtcNow >= c.StartDate &&
+                DateTime.UtcNow <= c.EndDate
+            );
+
+            if (activeCampaign != null)
             {
-                var workerIdClaim = _httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier);
-                if (workerIdClaim == null)
-                {
-                    return new ApiResponse<CreateOrderResponse> { IsSuccess = false, Message = "Unauthorized" };
-                }
-
-                var workerId = int.Parse(workerIdClaim.Value);
-                var worker = await _workerReadRepository.GetByIdAsync(workerId, true, "District");
-                if (worker == null)
-                {
-                    return new ApiResponse<CreateOrderResponse> { IsSuccess = false, Message = "Worker not found" };
-                }
-
-                var product = await _productReadRepository.GetByIdAsync(dto.ProductId, true, "ProductDistrictPrices");
-                if (product == null)
-                {
-                    return new ApiResponse<CreateOrderResponse> { IsSuccess = false, Message = "Product not found" };
-                }
-
-                decimal finalPrice = product.Price;
-
-                var campaigns = await _campaignReadRepository.GetAllAsync(false, false);
-                var activeCampaign = campaigns.FirstOrDefault(c =>
-                    c.IsActive &&
-                    DateTime.UtcNow >= c.StartDate &&
-                    DateTime.UtcNow <= c.EndDate
-                    );
-
-                if (activeCampaign != null)
-                {
-                    finalPrice *= (1 - activeCampaign.DiscountPercent / 100m);
-                }
-
-                var districtPriceEntity = product.ProductDistrictPrices
-                    .FirstOrDefault(p => p.DistrictId == worker.DistrictId);
-
-                if (districtPriceEntity != null)
-                {
-                    finalPrice -= districtPriceEntity.Price;
-                }
-
-                decimal totalPrice = finalPrice * dto.ProductCount;
-
-                var order = new Order
-                {
-                    ProductId = dto.ProductId,
-                    ProductCount = dto.ProductCount,
-                    WorkerId = workerId,
-                    TotalPrice = totalPrice
-                };
-                order.CreatedAt = DateTime.UtcNow.AddHours(4);
-                await _orderWriteRepository.CreateAsync(order);
-                await _orderWriteRepository.SaveChangeAsync();
-
-                return new ApiResponse<CreateOrderResponse>
-                {
-                    IsSuccess = true,
-                    Data = new CreateOrderResponse
-                    {
-                        TotalPrice = totalPrice
-                    }
-                };
+                finalPrice *= (1 - activeCampaign.DiscountPercent / 100m);
             }
-            catch (Exception ex)
+
+            var districtPriceEntity = product.ProductDistrictPrices
+                .FirstOrDefault(p => p.DistrictId == worker.DistrictId);
+
+            if (districtPriceEntity != null)
             {
-                return new ApiResponse<CreateOrderResponse>
-                {
-                    IsSuccess = false,
-                    Message = ex.Message
-                };
+                finalPrice -= districtPriceEntity.Price;
             }
+
+            decimal totalPrice = finalPrice * dto.ProductCount;
+
+            var order = new Order
+            {
+                ProductId = dto.ProductId,
+                ProductCount = dto.ProductCount,
+                WorkerId = workerId,
+                TotalPrice = totalPrice,
+                CreatedAt = DateTime.UtcNow.AddHours(4)
+            };
+
+            await _orderWriteRepository.CreateAsync(order);
+            await _orderWriteRepository.SaveChangeAsync();
+
+            return new CreateOrderResponse
+            {
+                TotalPrice = totalPrice
+            };
         }
+       
 
 
         public async Task<PagedResult<CreateOrderOutput>> GetPaginatedAsync(PaginationParams @params)

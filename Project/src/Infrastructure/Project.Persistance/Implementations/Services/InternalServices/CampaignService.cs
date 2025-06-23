@@ -22,14 +22,19 @@ public class CampaignService : ICampaignService
 
     public async Task<int> CreateAsync(CreateCampaignInput input)
     {
+        var newStartDate = input.StartDate;
+        var newEndDate = input.EndDate;
+
+
         var campaigns = await _campaignReadRepository.GetAllAsync(false, false);
 
         var conflict = campaigns.FirstOrDefault(c =>
-            !c.IsDeleted &&
-            ((input.StartDate >= c.StartDate && input.StartDate <= c.EndDate) ||
-             (input.EndDate >= c.StartDate && input.EndDate <= c.EndDate) ||
-             (input.StartDate <= c.StartDate && input.EndDate >= c.EndDate))
-        );
+                !c.IsDeleted &&
+                ((newStartDate >= c.StartDate && newStartDate <= c.EndDate) ||
+                 (newEndDate >= c.StartDate && newEndDate <= c.EndDate) ||
+                 (newStartDate <= c.StartDate && newEndDate >= c.EndDate))
+            );
+
 
         if (conflict != null)
             throw new CampaignConflictException(conflict.Name);

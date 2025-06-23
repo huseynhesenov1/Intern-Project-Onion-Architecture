@@ -11,8 +11,8 @@ namespace Project.Application.Abstractions.Services.InternalServices
         Task<int> UpdateAsync(int Id, UpdateProductInput productUpdateDTO);
         Task<ICollection<CreateProductOutput>> GetAllAsync();
         Task<PagedResult<Product>> GetPaginatedAsync(PaginationParams @params);
-        Task<ApiResponse<bool>> DeleteAsync(int id);
-        Task<ApiResponse<CreateProductOutput>> GetByIdAsync(int id);
+        Task<bool> DeleteAsync(int id);
+        Task<CreateProductOutput> GetByIdAsync(int id);
         Task<ICollection<CreateProductOutput>> SearchProductsAsync(string title);
     }
 }

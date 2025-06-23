@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Project.Application.Abstractions.Services.InternalServices;
 using Project.Application.DTOs.OrderDTOs;
+using Project.Application.Models;
 using Project.Domain.Entities.Commons;
 
 namespace Project.API.Controllers
@@ -15,19 +16,25 @@ namespace Project.API.Controllers
         {
             _orderService = orderService;
         }
+       
+
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateOrderInput orderCreateDTO)
+        public async Task<ApiResponse<CreateOrderResponse>> Create([FromBody] CreateOrderInput orderCreateDTO)
         {
             try
             {
-                var res = await _orderService.CreateAsync(orderCreateDTO);
-                return Ok(res);
+                var result = await _orderService.CreateAsync(orderCreateDTO);
+                return ApiResponse<CreateOrderResponse>.Success(result, "Sifariş uğurla yaradıldı");
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return ApiResponse<CreateOrderResponse>.Fail("Sifariş yaradılarkən xəta baş verdi", ex.Message);
             }
         }
+
+
+
+
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
