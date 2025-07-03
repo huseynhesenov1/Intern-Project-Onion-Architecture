@@ -1,6 +1,7 @@
 ﻿using Project.Application.Abstractions.Repositories.Worker;
 using Project.Application.Abstractions.Services.ExternalServices;
 using Project.Application.Abstractions.Services.InternalServices;
+using Project.Application.Abstractions.UnitOfWork;
 using Project.Application.DTOs.WorkerDTOs;
 using Project.Domain.Entities;
 using Project.Domain.Entities.Commons;
@@ -10,14 +11,17 @@ public class WorkerService : IWorkerService
     private readonly IWorkerReadRepository _workerReadRepository;
     private readonly IWorkerWriteRepository _workerWriteRepository;
     private readonly IJwtService _jwtService;
+    private readonly IUnitOfWork _unitOfWork;
 
     public WorkerService(IJwtService jwtService,
                          IWorkerWriteRepository workerWriteRepository,
-                         IWorkerReadRepository workerReadRepository)
+                         IWorkerReadRepository workerReadRepository,
+                         IUnitOfWork unitOfWork)
     {
         _jwtService = jwtService;
         _workerWriteRepository = workerWriteRepository;
         _workerReadRepository = workerReadRepository;
+        _unitOfWork = unitOfWork;
     }
 
     public async Task<ResponseWorkerOutput> CreateAsync(CreateWorkerInput input)
@@ -37,7 +41,7 @@ public class WorkerService : IWorkerService
         };
 
         await _workerWriteRepository.CreateAsync(worker);
-        await _workerWriteRepository.SaveChangeAsync();
+        await _unitOfWork.SaveChangesAsync();
 
         var token = _jwtService.GenerateToken(worker);
 
@@ -65,7 +69,7 @@ public class WorkerService : IWorkerService
         worker.UpdatedAt = DateTime.UtcNow.AddHours(4);
 
         _workerWriteRepository.Update(worker);
-        await _workerWriteRepository.SaveChangeAsync();
+        await _unitOfWork.SaveChangesAsync();
 
         return true;
     }
@@ -109,7 +113,7 @@ public class WorkerService : IWorkerService
             throw new Exception("Worker not found");
 
         _workerWriteRepository.SoftDelete(worker);
-        await _workerWriteRepository.SaveChangeAsync();
+        await _unitOfWork.SaveChangesAsync();
 
         return true;
     }

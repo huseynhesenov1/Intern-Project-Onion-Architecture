@@ -1,5 +1,6 @@
 ﻿using Project.Application.Abstractions.Repositories.Campaign;
 using Project.Application.Abstractions.Services.InternalServices;
+using Project.Application.Abstractions.UnitOfWork;
 using Project.Application.DTOs.Campaign;
 using Project.Application.Exceptions;
 using Project.Application.Models;
@@ -12,12 +13,15 @@ public class CampaignService : ICampaignService
 {
     private readonly ICampaignReadRepository _campaignReadRepository;
     private readonly ICampaignWriteRepository _campaignWriteRepository;
+    private readonly IUnitOfWork _unitOfWork;
 
     public CampaignService(ICampaignReadRepository campaignReadRepository,
-                           ICampaignWriteRepository campaignWriteRepository)
+                           ICampaignWriteRepository campaignWriteRepository,
+                           IUnitOfWork unitOfWork)
     {
         _campaignReadRepository = campaignReadRepository;
         _campaignWriteRepository = campaignWriteRepository;
+        _unitOfWork = unitOfWork;
     }
 
     public async Task<int> CreateAsync(CreateCampaignInput input)
@@ -53,7 +57,7 @@ public class CampaignService : ICampaignService
         if (created == null)
             throw new Exception("Kampaniya yaradılmadı.");
 
-        await _campaignWriteRepository.SaveChangeAsync();
+        await _unitOfWork.SaveChangesAsync();
         return entity.Id;
     }
 
@@ -83,7 +87,7 @@ public class CampaignService : ICampaignService
         existing.UpdatedAt = DateTime.UtcNow;
 
         _campaignWriteRepository.Update(existing);
-        await _campaignWriteRepository.SaveChangeAsync();
+        await _unitOfWork.SaveChangesAsync();
 
         return existing.Id;
     }
@@ -134,7 +138,7 @@ public class CampaignService : ICampaignService
             throw new CampaignNotFoundException(id);
 
         _campaignWriteRepository.SoftDelete(campaign);
-        await _campaignWriteRepository.SaveChangeAsync();
+        await _unitOfWork.SaveChangesAsync();
         return true;
     }
 
@@ -148,7 +152,7 @@ public class CampaignService : ICampaignService
             throw new InvalidOperationException("Bu kampaniya artıq aktivdir.");
 
         await _campaignWriteRepository.SetActiveAsync(id);
-        await _campaignWriteRepository.SaveChangeAsync();
+        await _unitOfWork.SaveChangesAsync();
         return true;
     }
 
@@ -162,7 +166,7 @@ public class CampaignService : ICampaignService
             throw new InvalidOperationException("Bu kampaniya artıq qeyri-aktivdir.");
 
         await _campaignWriteRepository.SetActiveAsync(id);
-        await _campaignWriteRepository.SaveChangeAsync();
+        await _unitOfWork.SaveChangesAsync();
         return true;
     }
 

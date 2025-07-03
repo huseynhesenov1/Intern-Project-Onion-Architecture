@@ -8,13 +8,7 @@ namespace Project.Application
     {
         public static void AddApplication(this IServiceCollection services)
         {
-            //services.AddScoped<IWorkerService, WorkerService>();
-            //services.AddScoped<IProductService, ProductService>();
-            //services.AddScoped<IDistrictService, DistrictService>();
-            //services.AddScoped<ICampaignService, CampaignService>();
-            //services.AddScoped<IOrderService, OrderService>();
-            //services.AddScoped<IProductDistrictService, ProductDistrictService>();
-            //services.AddScoped<IJwtService, JwtService>();
+           
         }
     }
 }

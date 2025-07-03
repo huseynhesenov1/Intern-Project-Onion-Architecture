@@ -3,16 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\implementations\\services\\internalservices\\workerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\implementations\\services\\internalservices\\workerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5E0C027-12C8-44DD-92FC-F20B1E21B8C6}|src\\Core\\Project.Domain\\Project.Domain.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.domain\\project.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C5E0C027-12C8-44DD-92FC-F20B1E21B8C6}|src\\Core\\Project.Domain\\Project.Domain.csproj|solutionrelative:src\\core\\project.domain\\project.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\implementations\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\implementations\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\implementations\\services\\internalservices\\districtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\implementations\\services\\internalservices\\districtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\services\\internalservices\\idistrictservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\services\\internalservices\\idistrictservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\services\\internalservices\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\services\\internalservices\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\services\\internalservices\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\services\\internalservices\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\implementations\\services\\internalservices\\workerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\implementations\\services\\internalservices\\workerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\implementations\\services\\internalservices\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\implementations\\services\\internalservices\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\implementations\\services\\internalservices\\productdistrictservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\implementations\\services\\internalservices\\productdistrictservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\implementations\\services\\internalservices\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,16 +59,32 @@
       "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\implementations\\services\\internalservices\\campaignservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\implementations\\repositories\\readrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\implementations\\repositories\\readrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\implementations\\repositories\\writerepository..cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\implementations\\repositories\\writerepository..cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\repositories\\iwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\repositories\\iwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\repositories\\ireadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\repositories\\ireadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\implementations\\services\\internalservices\\productdistrictservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\implementations\\services\\internalservices\\productdistrictservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\contexts\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\contexts\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\repositories\\worker\\iworkerwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\repositories\\worker\\iworkerwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\implementations\\repositories\\readrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\implementations\\repositories\\readrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C5E0C027-12C8-44DD-92FC-F20B1E21B8C6}|src\\Core\\Project.Domain\\Project.Domain.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.domain\\entities\\commons\\baseauditableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,10 +111,6 @@
       "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\migrations\\20250623234943_configurationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\migrations\\20250623234943_configurationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -73,10 +121,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\configrationsmanager\\workerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\configrationsmanager\\workerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\contexts\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\contexts\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C5E0C027-12C8-44DD-92FC-F20B1E21B8C6}|src\\Core\\Project.Domain\\Project.Domain.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.domain\\entities\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -119,24 +163,12 @@
       "RelativeMoniker": "D:0:0:{7CD1F9BA-5799-43F9-869A-A7A6FF469540}|src\\Presentation\\Project.API\\Project.API.csproj|solutionrelative:src\\presentation\\project.api\\controllers\\districtcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\services\\internalservices\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\services\\internalservices\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\dtos\\orderdtos\\createorderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\dtos\\orderdtos\\createorderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\services\\internalservices\\idistrictservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\services\\internalservices\\idistrictservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\services\\internalservices\\iworkerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\services\\internalservices\\iworkerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\services\\internalservices\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\services\\internalservices\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\services\\internalservices\\iproductdistrictservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -187,20 +219,8 @@
       "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\implementations\\repositories\\campaign\\campaignwriterepository.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\repositories\\iwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\repositories\\iwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\repositories\\campaign\\icampaignreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\repositories\\campaign\\icampaignreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\infrastructure\\project.persistance\\implementations\\repositories\\writerepository..cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BEE5623-7D54-47EA-B219-93ED8118F13D}|src\\Infrastructure\\Project.Persistance\\Project.Persistance.csproj|solutionrelative:src\\infrastructure\\project.persistance\\implementations\\repositories\\writerepository..cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\dtos\\campaigndtos\\createcampaigninput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -243,10 +263,6 @@
       "RelativeMoniker": "D:0:0:{C5E0C027-12C8-44DD-92FC-F20B1E21B8C6}|src\\Core\\Project.Domain\\Project.Domain.csproj|solutionrelative:src\\core\\project.domain\\entities\\district.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\repositories\\worker\\iworkerwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\repositories\\worker\\iworkerwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\repositories\\worker\\iworkerreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\abstractions\\repositories\\worker\\iworkerreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -257,10 +273,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7CD1F9BA-5799-43F9-869A-A7A6FF469540}|src\\Presentation\\Project.API\\Project.API.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\presentation\\project.api\\extensions\\swaggerextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CD1F9BA-5799-43F9-869A-A7A6FF469540}|src\\Presentation\\Project.API\\Project.API.csproj|solutionrelative:src\\presentation\\project.api\\extensions\\swaggerextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|solutionrelative:src\\core\\project.application\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D632552-FB53-4A3B-8FA7-E37DC223663D}|src\\Core\\Project.Application\\Project.Application.csproj|c:\\users\\acer\\desktop\\intern project onion\\project\\src\\core\\project.application\\abstractions\\services\\externalservices\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -386,11 +398,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 8,
               "Title": "IProductService.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IProductService.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IProductService.cs",
@@ -403,21 +415,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\ProductService.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\ProductService.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\ProductService.cs*",
-              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\ProductService.cs*",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAuwHYAAABGAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\ProductService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\ProductService.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAiwJIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T10:46:40.225Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 38,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\Controllers\\ProductController.cs",
@@ -429,6 +440,19 @@
               "IsPinned": true
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Project.Domain",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Project.Domain.csproj",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Project.Domain.csproj",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Project.Domain.csproj",
+              "RelativeToolTip": "src\\Core\\Project.Domain\\Project.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-03T14:45:47.835Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
@@ -438,345 +462,82 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CampaignService.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\CampaignService.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\CampaignService.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\CampaignService.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\CampaignService.cs",
-              "ViewState": "AgIAAKMAAAAAAAAAAADwv6gAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:42:09.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DistrictService.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\DistrictService.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\DistrictService.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\DistrictService.cs*",
-              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\DistrictService.cs*",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAIwEIAAABNAAAAAAAAAA==",
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\ServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\ServiceRegistration.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\ServiceRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:43:28.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\OrderService.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\OrderService.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\OrderService.cs*",
-              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\OrderService.cs*",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAiwCsAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:44:14.174Z",
+              "WhenOpened": "2025-06-02T10:57:20.7Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "WorkerService.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\WorkerService.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\WorkerService.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\WorkerService.cs*",
-              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\WorkerService.cs*",
-              "ViewState": "AgIAAE0AAAAAAAAAAADwv1oAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:47:27.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ReadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\ReadRepository.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\ReadRepository.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\ReadRepository.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\ReadRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAWwDQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T18:05:44.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IReadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\IReadRepository.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\IReadRepository.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\IReadRepository.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\Repositories\\IReadRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T18:08:10.308Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProductDistrictService.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\ProductDistrictService.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\ProductDistrictService.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\ProductDistrictService.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\ProductDistrictService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAQwBoAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:46:14.852Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BaseAuditableEntity.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Commons\\BaseAuditableEntity.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\Commons\\BaseAuditableEntity.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Commons\\BaseAuditableEntity.cs",
-              "RelativeToolTip": "src\\Core\\Project.Domain\\Entities\\Commons\\BaseAuditableEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T18:00:53.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Commons\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\Commons\\BaseEntity.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Commons\\BaseEntity.cs",
-              "RelativeToolTip": "src\\Core\\Project.Domain\\Entities\\Commons\\BaseEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T18:00:34.974Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ICampaignService.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\ICampaignService.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\ICampaignService.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\ICampaignService.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\ICampaignService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:33:49.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\appsettings.json",
-              "RelativeToolTip": "src\\Presentation\\Project.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-01T17:46:13.243Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CampaignController.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\CampaignController.cs",
-              "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\Controllers\\CampaignController.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\CampaignController.cs",
-              "RelativeToolTip": "src\\Presentation\\Project.API\\Controllers\\CampaignController.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAkwCQAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:51:53.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ApiResponse.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Models\\ApiResponse.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Models\\ApiResponse.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Models\\ApiResponse.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\Models\\ApiResponse.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAIA9wAwAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:13:26.692Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "ServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\ServiceRegistration.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\ServiceRegistration.cs",
               "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\ServiceRegistration.cs",
               "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\ServiceRegistration.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAuwB0AAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAqwBcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T18:48:33.942Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "20250623234801_configurationmanager.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234801_configurationmanager.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234801_configurationmanager.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234801_configurationmanager.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234801_configurationmanager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\UnitOfWork\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\UnitOfWork\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\UnitOfWork\\IUnitOfWork.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\UnitOfWork\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T23:48:01.994Z"
+              "WhenOpened": "2025-07-03T14:30:02.299Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "20250623234943_configurationmanager.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234943_configurationmanager.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234943_configurationmanager.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234943_configurationmanager.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234943_configurationmanager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "DistrictService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\DistrictService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\DistrictService.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\DistrictService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\DistrictService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T23:49:45.033Z"
+              "WhenOpened": "2025-06-02T10:43:28.968Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "WorkerConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\ConfigrationsManager\\WorkerConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\ConfigrationsManager\\WorkerConfiguration.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\ConfigrationsManager\\WorkerConfiguration.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\ConfigrationsManager\\WorkerConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "IDistrictService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IDistrictService.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IDistrictService.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IDistrictService.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IDistrictService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T23:36:55.717Z"
+              "WhenOpened": "2025-06-02T10:34:27.3Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Worker.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Worker.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\Worker.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Worker.cs",
-              "RelativeToolTip": "src\\Core\\Project.Domain\\Entities\\Worker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAARAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\UnitOfWork\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\UnitOfWork\\UnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T18:21:46.801Z"
+              "WhenOpened": "2025-07-03T14:30:24.19Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Contexts\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Contexts\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Contexts\\AppDbContext.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Contexts\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T17:43:23.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "CreateOrderInput.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderInput.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderInput.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderInput.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:03:20.109Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "CreateWorkerInput.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerInput.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerInput.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerInput.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerInput.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwA0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:10:04.557Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Program.cs",
-              "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\Program.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Program.cs",
-              "RelativeToolTip": "src\\Presentation\\Project.API\\Program.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAACwAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T17:47:48.518Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Project.Infrastructure.csproj",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj",
-              "RelativeToolTip": "src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-23T23:28:54.062Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ProductDistrictController.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\ProductDistrictController.cs",
-              "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\Controllers\\ProductDistrictController.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\ProductDistrictController.cs",
-              "RelativeToolTip": "src\\Presentation\\Project.API\\Controllers\\ProductDistrictController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:54:38.376Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "src\\Presentation\\Project.API\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:53:15.94Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "WorkerController.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\WorkerController.cs",
-              "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\Controllers\\WorkerController.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\WorkerController.cs",
-              "RelativeToolTip": "src\\Presentation\\Project.API\\Controllers\\WorkerController.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:55:27.795Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "DistrictController.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\DistrictController.cs",
-              "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\Controllers\\DistrictController.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\DistrictController.cs",
-              "RelativeToolTip": "src\\Presentation\\Project.API\\Controllers\\DistrictController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:52:36.311Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 7,
               "Title": "IOrderService.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IOrderService.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IOrderService.cs",
@@ -788,199 +549,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "CreateOrderResponse.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderResponse.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderResponse.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderResponse.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "WorkerService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\WorkerService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\WorkerService.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\WorkerService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\WorkerService.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAgwHMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:03:29.451Z"
+              "WhenOpened": "2025-06-02T10:47:27.433Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "IDistrictService.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IDistrictService.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IDistrictService.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IDistrictService.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IDistrictService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAzAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "ProductDistrictService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\ProductDistrictService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\ProductDistrictService.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\ProductDistrictService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\ProductDistrictService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAYwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:34:27.3Z"
+              "WhenOpened": "2025-06-02T10:46:14.852Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "IWorkerService.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IWorkerService.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IWorkerService.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IWorkerService.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IWorkerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\OrderService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\OrderService.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\OrderService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\OrderService.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAiwFMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:38:01.668Z"
+              "WhenOpened": "2025-06-02T10:44:14.174Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "IProductDistrictService.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IProductDistrictService.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IProductDistrictService.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IProductDistrictService.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IProductDistrictService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "CampaignService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\CampaignService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\CampaignService.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\CampaignService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\InternalServices\\CampaignService.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAADwv7gAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:36:03.614Z"
+              "WhenOpened": "2025-06-02T10:42:09.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "CreateWorkerOutput.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerOutput.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerOutput.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerOutput.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerOutput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "WriteRepository..cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\WriteRepository..cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\WriteRepository..cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\WriteRepository..cs",
+              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\WriteRepository..cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowCoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:11:40.168Z"
+              "WhenOpened": "2025-06-01T18:05:53.768Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "ResponseWorkerOutput.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\ResponseWorkerOutput.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\ResponseWorkerOutput.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\ResponseWorkerOutput.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\ResponseWorkerOutput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:10:27.352Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "SearchWorkerInput.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\SearchWorkerInput.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\SearchWorkerInput.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\SearchWorkerInput.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\SearchWorkerInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:11:59.23Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "UpdateWorkerInput.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\UpdateWorkerInput.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\UpdateWorkerInput.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\UpdateWorkerInput.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\UpdateWorkerInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:12:36.533Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "CampaignConflictException.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Exceptions\\CampaignConflictException.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Exceptions\\CampaignConflictException.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Exceptions\\CampaignConflictException.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\Exceptions\\CampaignConflictException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T13:02:57.985Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "CampaignNotFoundException .cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Exceptions\\CampaignNotFoundException .cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Exceptions\\CampaignNotFoundException .cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Exceptions\\CampaignNotFoundException .cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\Exceptions\\CampaignNotFoundException .cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T13:02:25.771Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Order.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\Order.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Order.cs",
-              "RelativeToolTip": "src\\Core\\Project.Domain\\Entities\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T18:18:59.782Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\Product.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Product.cs",
-              "RelativeToolTip": "src\\Core\\Project.Domain\\Entities\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T18:19:52.808Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "Campaign.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Campaign.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\Campaign.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Campaign.cs",
-              "RelativeToolTip": "src\\Core\\Project.Domain\\Entities\\Campaign.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T18:15:33.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "ICampaignWriteRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignWriteRepository.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignWriteRepository.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignWriteRepository.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignWriteRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T18:40:22.48Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "CampaignWriteRepository.cs.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Campaign\\CampaignWriteRepository.cs.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Campaign\\CampaignWriteRepository.cs.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Campaign\\CampaignWriteRepository.cs.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Campaign\\CampaignWriteRepository.cs.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAkwA4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T18:26:31.092Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 15,
               "Title": "IWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\IWriteRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\IWriteRepository.cs",
               "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\IWriteRepository.cs",
               "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\Repositories\\IWriteRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T18:07:36.829Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 16,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\IRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\IRepository.cs",
@@ -992,151 +633,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "ICampaignReadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignReadRepository.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignReadRepository.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignReadRepository.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignReadRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "IReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\IReadRepository.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\IReadRepository.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\IReadRepository.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\Repositories\\IReadRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T18:39:40.22Z"
+              "WhenOpened": "2025-06-01T18:08:10.308Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "WriteRepository..cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\WriteRepository..cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\WriteRepository..cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\WriteRepository..cs",
-              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\WriteRepository..cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAcAAAANAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Contexts\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Contexts\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Contexts\\AppDbContext.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Contexts\\AppDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBMAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T18:05:53.768Z"
+              "WhenOpened": "2025-06-01T17:43:23.432Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "CreateCampaignInput.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CreateCampaignInput.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CreateCampaignInput.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CreateCampaignInput.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CreateCampaignInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T09:58:36.854Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "UpdateProductInput.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\UpdateProductInput.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\UpdateProductInput.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\UpdateProductInput.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\UpdateProductInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:05:28.593Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "CreateProductInput.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductInput.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductInput.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductInput.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:05:01.578Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "ResponseProduct.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\ResponseProduct.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\ResponseProduct.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\ResponseProduct.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\ResponseProduct.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:05:18.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "CreateProductOutput.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductOutput.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductOutput.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductOutput.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductOutput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:05:08.362Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "CreateProductDistrictPriceOutput.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceOutput.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceOutput.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceOutput.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceOutput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:07:24.347Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "CreateProductDistrictPriceInput.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceInput.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceInput.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceInput.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:06:48.947Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "CreateDistrictInput.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\DistrictDTOs\\CreateDistrictInput.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\DistrictDTOs\\CreateDistrictInput.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\DistrictDTOs\\CreateDistrictInput.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\DistrictDTOs\\CreateDistrictInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:01:34.409Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "CampaignOutput.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CampaignOutput.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CampaignOutput.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CampaignOutput.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CampaignOutput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T09:58:55.96Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "District.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\District.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\District.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\District.cs",
-              "RelativeToolTip": "src\\Core\\Project.Domain\\Entities\\District.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T18:16:42.361Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 19,
               "Title": "IWorkerWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\Worker\\IWorkerWriteRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\Worker\\IWorkerWriteRepository.cs",
@@ -1148,7 +669,536 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\ReadRepository.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\ReadRepository.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\ReadRepository.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\ReadRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAWwDQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T18:05:44.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BaseAuditableEntity.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Commons\\BaseAuditableEntity.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\Commons\\BaseAuditableEntity.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Commons\\BaseAuditableEntity.cs",
+              "RelativeToolTip": "src\\Core\\Project.Domain\\Entities\\Commons\\BaseAuditableEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T18:00:53.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Commons\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\Commons\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Commons\\BaseEntity.cs",
+              "RelativeToolTip": "src\\Core\\Project.Domain\\Entities\\Commons\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T18:00:34.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ICampaignService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\ICampaignService.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\ICampaignService.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\ICampaignService.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\ICampaignService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:33:49.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\appsettings.json",
+              "RelativeToolTip": "src\\Presentation\\Project.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-01T17:46:13.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CampaignController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\CampaignController.cs",
+              "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\Controllers\\CampaignController.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\CampaignController.cs",
+              "RelativeToolTip": "src\\Presentation\\Project.API\\Controllers\\CampaignController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAkwCQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:51:53.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Models\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Models\\ApiResponse.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Models\\ApiResponse.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\Models\\ApiResponse.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIA9wAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:13:26.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "20250623234801_configurationmanager.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234801_configurationmanager.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234801_configurationmanager.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234801_configurationmanager.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234801_configurationmanager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:48:01.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "20250623234943_configurationmanager.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234943_configurationmanager.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234943_configurationmanager.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234943_configurationmanager.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Migrations\\20250623234943_configurationmanager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:49:45.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "WorkerConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\ConfigrationsManager\\WorkerConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\ConfigrationsManager\\WorkerConfiguration.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\ConfigrationsManager\\WorkerConfiguration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\ConfigrationsManager\\WorkerConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:36:55.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Worker.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Worker.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\Worker.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Worker.cs",
+              "RelativeToolTip": "src\\Core\\Project.Domain\\Entities\\Worker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T18:21:46.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CreateOrderInput.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderInput.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderInput.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderInput.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:03:20.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CreateWorkerInput.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerInput.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerInput.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerInput.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerInput.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:10:04.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Program.cs",
+              "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\Program.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Program.cs",
+              "RelativeToolTip": "src\\Presentation\\Project.API\\Program.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAACwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T17:47:48.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Project.Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj",
+              "RelativeToolTip": "src\\Infrastructure\\Project.Infrastructure\\Project.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-23T23:28:54.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ProductDistrictController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\ProductDistrictController.cs",
+              "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\Controllers\\ProductDistrictController.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\ProductDistrictController.cs",
+              "RelativeToolTip": "src\\Presentation\\Project.API\\Controllers\\ProductDistrictController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:54:38.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "src\\Presentation\\Project.API\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:53:15.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "WorkerController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\WorkerController.cs",
+              "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\Controllers\\WorkerController.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\WorkerController.cs",
+              "RelativeToolTip": "src\\Presentation\\Project.API\\Controllers\\WorkerController.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:55:27.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "DistrictController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\DistrictController.cs",
+              "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\Controllers\\DistrictController.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Controllers\\DistrictController.cs",
+              "RelativeToolTip": "src\\Presentation\\Project.API\\Controllers\\DistrictController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:52:36.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "CreateOrderResponse.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderResponse.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderResponse.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderResponse.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:03:29.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IWorkerService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IWorkerService.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IWorkerService.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IWorkerService.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IWorkerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:38:01.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IProductDistrictService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IProductDistrictService.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IProductDistrictService.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IProductDistrictService.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\Services\\InternalServices\\IProductDistrictService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:36:03.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "CreateWorkerOutput.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerOutput.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerOutput.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerOutput.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\CreateWorkerOutput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:11:40.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ResponseWorkerOutput.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\ResponseWorkerOutput.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\ResponseWorkerOutput.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\ResponseWorkerOutput.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\ResponseWorkerOutput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:10:27.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "SearchWorkerInput.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\SearchWorkerInput.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\SearchWorkerInput.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\SearchWorkerInput.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\SearchWorkerInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:11:59.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "UpdateWorkerInput.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\UpdateWorkerInput.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\UpdateWorkerInput.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\UpdateWorkerInput.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\WorkerDTOs\\UpdateWorkerInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:12:36.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "CampaignConflictException.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Exceptions\\CampaignConflictException.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Exceptions\\CampaignConflictException.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Exceptions\\CampaignConflictException.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\Exceptions\\CampaignConflictException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T13:02:57.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "CampaignNotFoundException .cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Exceptions\\CampaignNotFoundException .cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Exceptions\\CampaignNotFoundException .cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Exceptions\\CampaignNotFoundException .cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\Exceptions\\CampaignNotFoundException .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T13:02:25.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Order.cs",
+              "RelativeToolTip": "src\\Core\\Project.Domain\\Entities\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T18:18:59.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\Product.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Product.cs",
+              "RelativeToolTip": "src\\Core\\Project.Domain\\Entities\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T18:19:52.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Campaign.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Campaign.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\Campaign.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Campaign.cs",
+              "RelativeToolTip": "src\\Core\\Project.Domain\\Entities\\Campaign.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T18:15:33.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "ICampaignWriteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignWriteRepository.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignWriteRepository.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignWriteRepository.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignWriteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T18:40:22.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "CampaignWriteRepository.cs.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Campaign\\CampaignWriteRepository.cs.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Campaign\\CampaignWriteRepository.cs.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Campaign\\CampaignWriteRepository.cs.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Campaign\\CampaignWriteRepository.cs.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAkwA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T18:26:31.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "ICampaignReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignReadRepository.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignReadRepository.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignReadRepository.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\Abstractions\\Repositories\\Campaign\\ICampaignReadRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T18:39:40.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "CreateCampaignInput.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CreateCampaignInput.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CreateCampaignInput.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CreateCampaignInput.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CreateCampaignInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T09:58:36.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "UpdateProductInput.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\UpdateProductInput.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\UpdateProductInput.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\UpdateProductInput.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\UpdateProductInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:05:28.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "CreateProductInput.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductInput.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductInput.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductInput.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:05:01.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "ResponseProduct.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\ResponseProduct.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\ResponseProduct.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\ResponseProduct.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\ResponseProduct.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:05:18.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "CreateProductOutput.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductOutput.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductOutput.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductOutput.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\ProductDTOs\\CreateProductOutput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:05:08.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "CreateProductDistrictPriceOutput.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceOutput.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceOutput.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceOutput.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceOutput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:07:24.347Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 61,
+              "Title": "CreateProductDistrictPriceInput.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceInput.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceInput.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceInput.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\ProductDistrictPriceDTOs\\CreateProductDistrictPriceInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:06:48.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "CreateDistrictInput.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\DistrictDTOs\\CreateDistrictInput.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\DistrictDTOs\\CreateDistrictInput.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\DistrictDTOs\\CreateDistrictInput.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\DistrictDTOs\\CreateDistrictInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:01:34.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "CampaignOutput.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CampaignOutput.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CampaignOutput.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CampaignOutput.cs",
+              "RelativeToolTip": "src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\CampaignOutput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T09:58:55.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "District.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\District.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\District.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\District.cs",
+              "RelativeToolTip": "src\\Core\\Project.Domain\\Entities\\District.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T18:16:42.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
               "Title": "IWorkerReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\Worker\\IWorkerReadRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\Worker\\IWorkerReadRepository.cs",
@@ -1160,7 +1210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 66,
               "Title": "JwtService.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\ExternalServices\\JwtService.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Services\\ExternalServices\\JwtService.cs",
@@ -1172,19 +1222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "ServiceRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\ServiceRegistration.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Project.Application\\ServiceRegistration.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\ServiceRegistration.cs",
-              "RelativeToolTip": "src\\Core\\Project.Application\\ServiceRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:57:20.7Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 67,
               "Title": "SwaggerExtensions.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Presentation\\Project.API\\Extensions\\SwaggerExtensions.cs",
               "RelativeDocumentMoniker": "src\\Presentation\\Project.API\\Extensions\\SwaggerExtensions.cs",
@@ -1196,7 +1234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 68,
               "Title": "IJwtService.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Services\\ExternalServices\\IJwtService.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Services\\ExternalServices\\IJwtService.cs",
@@ -1208,7 +1246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 69,
               "Title": "CreateOrderOutput.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderOutput.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\OrderDTOs\\CreateOrderOutput.cs",
@@ -1220,7 +1258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 71,
               "Title": "UpdateDistrictInput.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\DistrictDTOs\\UpdateDistrictInput.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\DistrictDTOs\\UpdateDistrictInput.cs",
@@ -1232,7 +1270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 70,
               "Title": "CreateDistrictOutput.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\DistrictDTOs\\CreateDistrictOutput.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\DistrictDTOs\\CreateDistrictOutput.cs",
@@ -1244,7 +1282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 72,
               "Title": "UpdateCampaignInput.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\UpdateCampaignInput.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\DTOs\\CampaignDTOs\\UpdateCampaignInput.cs",
@@ -1256,7 +1294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 95,
               "Title": "20250601185129_initTables.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Migrations\\20250601185129_initTables.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Migrations\\20250601185129_initTables.cs",
@@ -1268,7 +1306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 74,
               "Title": "WorkerReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Worker\\WorkerReadRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Worker\\WorkerReadRepository.cs",
@@ -1280,7 +1318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 73,
               "Title": "WorkerWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Worker\\WorkerWriteRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Worker\\WorkerWriteRepository.cs",
@@ -1292,7 +1330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 75,
               "Title": "ProductDistrictPriceWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\ProductDistrictPrice\\ProductDistrictPriceWriteRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\ProductDistrictPrice\\ProductDistrictPriceWriteRepository.cs",
@@ -1304,7 +1342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 76,
               "Title": "ProductDistrictPriceReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\ProductDistrictPrice\\ProductDistrictPriceReadRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\ProductDistrictPrice\\ProductDistrictPriceReadRepository.cs",
@@ -1316,7 +1354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 77,
               "Title": "IProductDistrictPriceReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\ProductDistrictPrice\\IProductDistrictPriceReadRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\ProductDistrictPrice\\IProductDistrictPriceReadRepository.cs",
@@ -1328,7 +1366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 78,
               "Title": "IProductDistrictPriceWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\ProductDistrictPrice\\IProductDistrictPriceWriteRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\ProductDistrictPrice\\IProductDistrictPriceWriteRepository.cs",
@@ -1340,7 +1378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 79,
               "Title": "ProductWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Product\\ProductWriteRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Product\\ProductWriteRepository.cs",
@@ -1352,7 +1390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 80,
               "Title": "ProductReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Product\\ProductReadRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Product\\ProductReadRepository.cs",
@@ -1364,7 +1402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 81,
               "Title": "IProductWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\Product\\IProductWriteRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\Product\\IProductWriteRepository.cs",
@@ -1376,7 +1414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 82,
               "Title": "IProductReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\Product\\IProductReadRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\Product\\IProductReadRepository.cs",
@@ -1388,7 +1426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 84,
               "Title": "OrderWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Order\\OrderWriteRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Order\\OrderWriteRepository.cs",
@@ -1400,7 +1438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 85,
               "Title": "IOrderWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\Order\\IOrderWriteRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\Order\\IOrderWriteRepository.cs",
@@ -1412,7 +1450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 86,
               "Title": "IOrderReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\Order\\IOrderReadRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\Order\\IOrderReadRepository.cs",
@@ -1424,7 +1462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 83,
               "Title": "OrderReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Order\\OrderReadRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Order\\OrderReadRepository.cs",
@@ -1436,7 +1474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 88,
               "Title": "DistrictReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\District\\DistrictReadRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\District\\DistrictReadRepository.cs",
@@ -1448,7 +1486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 89,
               "Title": "IDistrictWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\District\\IDistrictWriteRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\District\\IDistrictWriteRepository.cs",
@@ -1460,7 +1498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 90,
               "Title": "IDistrictReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Application\\Abstractions\\Repositories\\District\\IDistrictReadRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Application\\Abstractions\\Repositories\\District\\IDistrictReadRepository.cs",
@@ -1472,7 +1510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 87,
               "Title": "DistrictWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\District\\DistrictWriteRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\District\\DistrictWriteRepository.cs",
@@ -1484,7 +1522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 91,
               "Title": "CampaignReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Campaign\\CampaignReadRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Implementations\\Repositories\\Campaign\\CampaignReadRepository.cs",
@@ -1496,7 +1534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 92,
               "Title": "ProductDistrictPrice.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\ProductDistrictPrice.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\ProductDistrictPrice.cs",
@@ -1508,7 +1546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 94,
               "Title": "PaginationParams.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Commons\\PaginationParams.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\Commons\\PaginationParams.cs",
@@ -1520,7 +1558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 93,
               "Title": "PagedResult.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Core\\Project.Domain\\Entities\\Commons\\PagedResult.cs",
               "RelativeDocumentMoniker": "src\\Core\\Project.Domain\\Entities\\Commons\\PagedResult.cs",
@@ -1532,7 +1570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 96,
               "Title": "20250601175800_initDB.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Intern Project Onion\\Project\\src\\Infrastructure\\Project.Persistance\\Migrations\\20250601175800_initDB.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Project.Persistance\\Migrations\\20250601175800_initDB.cs",

@@ -2,6 +2,7 @@
 using Project.Application.Abstractions.Services.InternalServices;
 using Project.Application.DTOs.DistrictDTOs;
 using Project.Domain.Entities;
+using Project.Application.Abstractions.UnitOfWork;
 
 namespace Project.Persistance.Implementations.Services.InternalServices
 {
@@ -9,11 +10,13 @@ namespace Project.Persistance.Implementations.Services.InternalServices
     {
         private readonly IDistrictReadRepository _districtReadRepository;
         private readonly IDistrictWriteRepository _districtWriteRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public DistrictService(IDistrictWriteRepository districtWriteRepository, IDistrictReadRepository districtReadRepository)
+        public DistrictService(IDistrictWriteRepository districtWriteRepository, IDistrictReadRepository districtReadRepository, IUnitOfWork unitOfWork)
         {
             _districtWriteRepository = districtWriteRepository;
             _districtReadRepository = districtReadRepository;
+            _unitOfWork = unitOfWork;
         }
 
 
@@ -24,7 +27,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                 Name = districtCreateDTO.Name,
             };
             await _districtWriteRepository.CreateAsync(district);
-            await _districtWriteRepository.SaveChangeAsync();
+            await _unitOfWork.SaveChangesAsync();
             return district;
         }
 
@@ -43,7 +46,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             newDistrict.Id = Id;
             newDistrict.UpdatedAt = DateTime.UtcNow.AddHours(4);
             _districtWriteRepository.Update(newDistrict);
-            await _districtWriteRepository.SaveChangeAsync();
+            await _unitOfWork.SaveChangesAsync();
             return newDistrict;
         }
 
@@ -82,7 +85,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                 throw new Exception("Bu Id-e uygun deyer tapilmadi");
             }
             var res = _districtWriteRepository.SoftDelete(district);
-            await _districtWriteRepository.SaveChangeAsync();
+            await _unitOfWork.SaveChangesAsync();
             return res;
         }
     }

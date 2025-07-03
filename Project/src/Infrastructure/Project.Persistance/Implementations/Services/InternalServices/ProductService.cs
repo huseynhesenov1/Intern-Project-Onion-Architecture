@@ -1,6 +1,7 @@
 ﻿using Project.Application.Abstractions.Repositories.Campaign;
 using Project.Application.Abstractions.Repositories.Product;
 using Project.Application.Abstractions.Services.InternalServices;
+using Project.Application.Abstractions.UnitOfWork;
 using Project.Application.DTOs.ProductDTOs;
 using Project.Application.Models;
 using Project.Domain.Entities;
@@ -13,12 +14,14 @@ namespace Project.Persistance.Implementations.Services.InternalServices
         private readonly IProductReadRepository _productReadRepository;
         private readonly IProductWriteRepository _productWriteRepository;
         private readonly ICampaignReadRepository _campaignReadRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public ProductService(IProductWriteRepository productWriteRepository, IProductReadRepository productReadRepository, ICampaignReadRepository campaignReadRepository)
+        public ProductService(IProductWriteRepository productWriteRepository, IProductReadRepository productReadRepository, ICampaignReadRepository campaignReadRepository, IUnitOfWork unitOfWork)
         {
             _productWriteRepository = productWriteRepository;
             _productReadRepository = productReadRepository;
             _campaignReadRepository = campaignReadRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<int> CreateAsync(CreateProductInput productCreateDTO)
@@ -32,7 +35,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             if (result == null)
                 throw new Exception("Product could not be created.");
 
-            await _productWriteRepository.SaveChangeAsync();
+            await _unitOfWork.SaveChangesAsync();
             return product.Id;
         }
 
@@ -45,7 +48,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             product.Price = productUpdateDTO.Price;
             product.UpdatedAt = DateTime.UtcNow.AddHours(4);
             _productWriteRepository.Update(product);
-            await _productWriteRepository.SaveChangeAsync();
+            await _unitOfWork.SaveChangesAsync();
             return product.Id;
         }
 
@@ -120,7 +123,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             if (product == null || product.IsDeleted)
                 throw new Exception("Product not found");
             _productWriteRepository.SoftDelete(product);
-            await _productWriteRepository.SaveChangeAsync();
+            await _unitOfWork.SaveChangesAsync();
             return true;
         }
 

@@ -40,10 +40,7 @@ public class WriteRepository<T> : IWriteRepository<T> where T : BaseAuditableEnt
         return tentity;
     }
 
-    public async Task SaveChangeAsync()
-    {
-        await _context.SaveChangesAsync();
-    }
+   
 
     public T Update(T tentity)
     {

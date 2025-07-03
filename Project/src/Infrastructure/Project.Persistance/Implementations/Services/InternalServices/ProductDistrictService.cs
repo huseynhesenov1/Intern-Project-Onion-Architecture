@@ -1,5 +1,6 @@
 ﻿using Project.Application.Abstractions.Repositories.ProductDistrictPrice;
 using Project.Application.Abstractions.Services.InternalServices;
+using Project.Application.Abstractions.UnitOfWork;
 using Project.Application.DTOs.ProductDistrictPriceDTOs;
 using Project.Domain.Entities;
 
@@ -9,11 +10,13 @@ namespace Project.Persistance.Implementations.Services.InternalServices
     {
         private readonly IProductDistrictPriceReadRepository _productDistrictPriceReadRepository;
         private readonly IProductDistrictPriceWriteRepository _productDistrictPriceWriteRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public ProductDistrictService(IProductDistrictPriceWriteRepository productDistrictPriceWriteRepository, IProductDistrictPriceReadRepository productDistrictPriceReadRepository)
+        public ProductDistrictService(IProductDistrictPriceWriteRepository productDistrictPriceWriteRepository, IProductDistrictPriceReadRepository productDistrictPriceReadRepository, IUnitOfWork unitOfWork)
         {
             _productDistrictPriceWriteRepository = productDistrictPriceWriteRepository;
             _productDistrictPriceReadRepository = productDistrictPriceReadRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<ProductDistrictPrice> CreateAsync(CreateProductDistrictPriceInput dto)
@@ -25,7 +28,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                 DistrictId = dto.DistrictId,
             };
             var res = await _productDistrictPriceWriteRepository.CreateAsync(productDistrictPrice);
-            await _productDistrictPriceWriteRepository.SaveChangeAsync();
+            await _unitOfWork.SaveChangesAsync();
             return res;
         }
 

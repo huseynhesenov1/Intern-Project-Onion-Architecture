@@ -4,6 +4,7 @@ using Project.Application.Abstractions.Repositories.Order;
 using Project.Application.Abstractions.Repositories.Product;
 using Project.Application.Abstractions.Repositories.Worker;
 using Project.Application.Abstractions.Services.InternalServices;
+using Project.Application.Abstractions.UnitOfWork;
 using Project.Application.DTOs.OrderDTOs;
 using Project.Application.Models;
 using Project.Domain.Entities;
@@ -20,8 +21,9 @@ namespace Project.Persistance.Implementations.Services.InternalServices
         private readonly IOrderReadRepository _orderReadRepository;
         private readonly IOrderWriteRepository _orderWriteRepository;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public OrderService(IHttpContextAccessor httpContextAccessor, IOrderWriteRepository orderWriteRepository, IOrderReadRepository orderReadRepository, ICampaignReadRepository campaignReadRepository, IProductReadRepository productReadRepository, IWorkerReadRepository workerReadRepository)
+        public OrderService(IHttpContextAccessor httpContextAccessor, IOrderWriteRepository orderWriteRepository, IOrderReadRepository orderReadRepository, ICampaignReadRepository campaignReadRepository, IProductReadRepository productReadRepository, IWorkerReadRepository workerReadRepository, IUnitOfWork unitOfWork)
         {
             _httpContextAccessor = httpContextAccessor;
             _orderWriteRepository = orderWriteRepository;
@@ -29,6 +31,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             _campaignReadRepository = campaignReadRepository;
             _productReadRepository = productReadRepository;
             _workerReadRepository = workerReadRepository;
+            _unitOfWork = unitOfWork;
         }
         public async Task<CreateOrderResponse> CreateAsync(CreateOrderInput dto)
         {
@@ -78,7 +81,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             };
 
             await _orderWriteRepository.CreateAsync(order);
-            await _orderWriteRepository.SaveChangeAsync();
+            await _unitOfWork.SaveChangesAsync();
 
             return new CreateOrderResponse
             {
