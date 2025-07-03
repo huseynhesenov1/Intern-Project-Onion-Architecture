@@ -1,5 +1,4 @@
 ﻿using Project.Application.DTOs.Campaign;
-using Project.Application.Models;
 using Project.Domain.Entities;
 using Project.Domain.Entities.Commons;
 
@@ -14,6 +13,7 @@ public interface ICampaignService
     Task<bool> DeleteAsync(int id);
     Task<bool> EnableAsync(int id);
     Task<bool> DisableAsync(int id);
-    Task<PagedResult<Campaign>> GetPaginatedAsync(PaginationParams @params);
+    Task<PagedResult<CampaignOutput>> GetPaginatedAsync(PaginationParams paginationParams);
     
+
 }

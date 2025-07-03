@@ -1,5 +1,4 @@
 ﻿using Project.Application.DTOs.OrderDTOs;
-using Project.Application.Models;
 using Project.Domain.Entities.Commons;
 
 namespace Project.Application.Abstractions.Services.InternalServices
@@ -8,6 +7,6 @@ namespace Project.Application.Abstractions.Services.InternalServices
     {
         Task<CreateOrderResponse> CreateAsync(CreateOrderInput dto);
         Task<ICollection<CreateOrderOutput>> GetAllAsync();
-        Task<PagedResult<CreateOrderOutput>> GetPaginatedAsync(PaginationParams @params);
+        Task<PagedResult<CreateOrderOutput>> GetPaginatedAsync(PaginationParams paginationParams);
     }
 }

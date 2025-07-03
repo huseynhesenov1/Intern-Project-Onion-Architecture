@@ -1,4 +1,4 @@
-﻿namespace Project.Application.Models
+﻿namespace Project.API.Models
 {
     public class ApiResponse<T>
     {

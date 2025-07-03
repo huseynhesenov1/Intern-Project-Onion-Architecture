@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Project.API.Models;
 using Project.Application.Abstractions.Services.InternalServices;
 using Project.Application.DTOs.ProductDistrictPriceDTOs;
+using Project.Domain.Entities;
 
 namespace Project.API.Controllers
 {
@@ -15,24 +17,31 @@ namespace Project.API.Controllers
             _productDistrictService = productDistrictService;
         }
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateProductDistrictPriceInput productDistrictPriceCreateDTO)
+        public async Task<IActionResult> Create([FromBody] CreateProductDistrictPriceInput input)
         {
             try
             {
-                var res = await _productDistrictService.CreateAsync(productDistrictPriceCreateDTO);
-                return Ok(res);
+                var result = await _productDistrictService.CreateAsync(input);
+                return Ok(ApiResponse<ProductDistrictPrice>.Success(result, "Məhsul-rayon qiyməti yaradıldı"));
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(ApiResponse<int>.Fail("Yaradılarkən xəta baş verdi", ex.Message));
             }
-
         }
+
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var res = await _productDistrictService.GetAllAsync();
-            return Ok(res);
+            try
+            {
+                var result = await _productDistrictService.GetAllAsync();
+                return Ok(ApiResponse<ICollection<ProductDistrictPrice>>.Success(result, "Bütün məhsul-rayon qiymətləri alındı"));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponse<ICollection<ProductDistrictPrice>>.Fail("Xəta baş verdi", ex.Message));
+            }
         }
     }
 }

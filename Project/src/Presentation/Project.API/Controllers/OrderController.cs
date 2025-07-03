@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Project.API.Models;
 using Project.Application.Abstractions.Services.InternalServices;
 using Project.Application.DTOs.OrderDTOs;
-using Project.Application.Models;
 using Project.Domain.Entities.Commons;
 
 namespace Project.API.Controllers
@@ -34,25 +33,33 @@ namespace Project.API.Controllers
 
 
 
-
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             try
             {
-                var res = await _orderService.GetAllAsync();
-                return Ok(res);
+                var result = await _orderService.GetAllAsync();
+                return Ok(ApiResponse<ICollection<CreateOrderOutput>>.Success(result, "Bütün sifarişlər uğurla alındı"));
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return StatusCode(500, ApiResponse<ICollection<CreateOrderOutput>>.Fail("Sifarişlər alınarkən xəta baş verdi", ex.Message));
             }
         }
+
         [HttpGet("Paginated")]
         public async Task<IActionResult> GetPaginated([FromQuery] PaginationParams @params)
         {
-            var result = await _orderService.GetPaginatedAsync(@params);
-            return Ok(result);
+            try
+            {
+                var result = await _orderService.GetPaginatedAsync(@params);
+                return Ok(ApiResponse<PagedResult<CreateOrderOutput>>.Success(result, "Paged nəticələr uğurla alındı"));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponse<PagedResult<CreateOrderOutput>>.Fail("Paged nəticələr alınarkən xəta baş verdi", ex.Message));
+            }
         }
+
     }
 }

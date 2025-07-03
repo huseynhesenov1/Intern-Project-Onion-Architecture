@@ -8,7 +8,7 @@ namespace Project.Application.Abstractions.Services.InternalServices
     {
         Task<ICollection<Worker>> GetAllAsync();
         Task<ResponseWorkerOutput> CreateAsync(CreateWorkerInput workerCreateDTO);
-        Task<PagedResult<Worker>> GetPaginatedAsync(PaginationParams @params);
+        Task<PagedResult<CreateWorkerOutput>> GetPaginatedAsync(PaginationParams paginationParams);
         Task<bool> UpdateAsync(int id, UpdateWorkerInput workerUpdateDTO);
         Task<bool> DeleteAsync(int id);
         Task<CreateWorkerOutput> GetByIdAsync(int id);

@@ -3,7 +3,6 @@ using Project.Application.Abstractions.Services.InternalServices;
 using Project.Application.Abstractions.UnitOfWork;
 using Project.Application.DTOs.Campaign;
 using Project.Application.Exceptions;
-using Project.Application.Models;
 using Project.Domain.Entities;
 using Project.Domain.Entities.Commons;
 
@@ -169,16 +168,46 @@ public class CampaignService : ICampaignService
         await _unitOfWork.SaveChangesAsync();
         return true;
     }
-
-    public async Task<PagedResult<Campaign>> GetPaginatedAsync(PaginationParams @params)
+    public async Task<PagedResult<CampaignOutput>> GetPaginatedAsync(PaginationParams paginationParams)
     {
         var all = await _campaignReadRepository.GetAllAsync(false);
-        var filtered = all.Skip((@params.PageNumber - 1) * @params.PageSize)
-                          .Take(@params.PageSize)
-                          .ToList();
 
-        return new PagedResult<Campaign>(filtered, all.Count, @params.PageNumber, @params.PageSize);
+        var filtered = all
+            .Skip((paginationParams.PageNumber - 1) * paginationParams.PageSize)
+            .Take(paginationParams.PageSize)
+            .ToList();
+
+        var mapped = filtered.Select(c => new CampaignOutput
+        {
+            Id = c.Id,
+            IsActive = c.IsActive,
+            Name = c.Name,
+            Description = c.Description,
+            StartDate = c.StartDate,
+            EndDate = c.EndDate,
+            DistrictId = c.DistrictId,
+            DiscountPercent = c.DiscountPercent,
+            CreatedAt = c.CreatedAt,
+            UpdatedAt = c.UpdatedAt
+        }).ToList();
+
+        return new PagedResult<CampaignOutput>(
+            items: mapped,
+            totalCount: all.Count,
+            pageNumber: paginationParams.PageNumber,
+            pageSize: paginationParams.PageSize
+        );
     }
+
+    //public async Task<PagedResult<Campaign>> GetPaginatedAsync(PaginationParams paginationParams)
+    //{
+    //    var all = await _campaignReadRepository.GetAllAsync(false);
+    //    var filtered = all.Skip((paginationParams.PageNumber - 1) * paginationParams.PageSize)
+    //                      .Take(paginationParams.PageSize)
+    //                      .ToList();
+
+    //    return new PagedResult<Campaign>(filtered, all.Count, paginationParams.PageNumber, paginationParams.PageSize);
+    //}
 }
 
 

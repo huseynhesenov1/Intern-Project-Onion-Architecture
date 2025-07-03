@@ -3,7 +3,6 @@ using Project.Application.Abstractions.Repositories.Product;
 using Project.Application.Abstractions.Services.InternalServices;
 using Project.Application.Abstractions.UnitOfWork;
 using Project.Application.DTOs.ProductDTOs;
-using Project.Application.Models;
 using Project.Domain.Entities;
 using Project.Domain.Entities.Commons;
 
@@ -93,11 +92,43 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             return productReadDTOs;
         }
 
-        public async Task<PagedResult<Product>> GetPaginatedAsync(PaginationParams @params)
+        //public async Task<PagedResult<Product>> GetPaginatedAsync(PaginationParams paginationParams)
+        //{
+        //    var all = await _productReadRepository.GetAllAsync(false);
+        //    var filtered = all.Skip((paginationParams.PageNumber - 1) * paginationParams.PageSize).Take(paginationParams.PageSize).ToList();
+        //    return new PagedResult<Product>(filtered, all.Count, paginationParams.PageNumber, paginationParams.PageSize);
+        //}
+
+
+        public async Task<PagedResult<CreateProductOutput>> GetPaginatedAsync(PaginationParams paginationParams)
         {
             var all = await _productReadRepository.GetAllAsync(false);
-            var filtered = all.Skip((@params.PageNumber - 1) * @params.PageSize).Take(@params.PageSize).ToList();
-            return new PagedResult<Product>(filtered, all.Count, @params.PageNumber, @params.PageSize);
+
+            var filtered = all
+                .Skip((paginationParams.PageNumber - 1) * paginationParams.PageSize)
+                .Take(paginationParams.PageSize)
+                .ToList();
+
+            var mapped = filtered.Select(p => new CreateProductOutput
+            {
+                Id = p.Id,
+                Title = p.Title,
+                Price = p.Price,
+                OldPrice = p.Campaign != null
+                    ? Math.Round(p.Price / (1 - (p.Campaign.DiscountPercent / 100m)), 2)
+                    : p.Price, // Kampaniya yoxdursa, OldPrice = Price
+                CampaignId = p.CampaignId ?? 0,
+                CampaignName = p.Campaign != null ? p.Campaign.Name : "Yoxdur",
+                CreatedAt = p.CreatedAt,
+                UpdatedAt = p.UpdatedAt
+            }).ToList();
+
+            return new PagedResult<CreateProductOutput>(
+                items: mapped,
+                totalCount: all.Count,
+                pageNumber: paginationParams.PageNumber,
+                pageSize: paginationParams.PageSize
+            );
         }
 
         public async Task<CreateProductOutput> GetByIdAsync(int id)

@@ -44,6 +44,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                 Name = districtUpdateDTO.Name,
             };
             newDistrict.Id = Id;
+            newDistrict.CreatedAt = district.CreatedAt;
             newDistrict.UpdatedAt = DateTime.UtcNow.AddHours(4);
             _districtWriteRepository.Update(newDistrict);
             await _unitOfWork.SaveChangesAsync();

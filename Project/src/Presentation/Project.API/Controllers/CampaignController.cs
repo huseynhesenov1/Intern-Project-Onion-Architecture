@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Project.API.Models;
 using Project.Application.Abstractions.Services.InternalServices;
 using Project.Application.DTOs.Campaign;
 using Project.Application.Exceptions;
-using Project.Application.Models;
 using Project.Domain.Entities;
 using Project.Domain.Entities.Commons;
 
@@ -22,8 +22,15 @@ public class CampaignController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
-        var result = await _campaignService.GetAllAsync();
-        return Ok(ApiResponse<ICollection<CampaignOutput>>.Success(result, "Uğurla alındı"));
+        try
+        {
+            var result = await _campaignService.GetAllAsync();
+            return Ok(ApiResponse<ICollection<CampaignOutput>>.Success(result, "Uğurla alındı"));
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ApiResponse<ICollection<CampaignOutput>>.Fail("Server xətası baş verdi", ex.Message));
+        }
     }
 
     [HttpGet("{id}")]
@@ -32,15 +39,15 @@ public class CampaignController : ControllerBase
         try
         {
             var result = await _campaignService.GetByIdAsync(id);
-            return Ok(ApiResponse<CampaignOutput>.Success(result, "Uğurlu"));
+            return Ok(ApiResponse<CampaignOutput>.Success(result, "Uğurla tapıldı"));
         }
         catch (CampaignNotFoundException ex)
         {
-            return NotFound(ApiResponse<CampaignOutput>.Fail("Tapılmadı", ex.Message));
+            return NotFound(ApiResponse<CampaignOutput>.Fail("Kampaniya tapılmadı", ex.Message));
         }
         catch (Exception ex)
         {
-            return StatusCode(500, ApiResponse<string>.Fail("Xəta baş verdi", ex.Message));
+            return StatusCode(500, ApiResponse<CampaignOutput>.Fail("Server xətası baş verdi", ex.Message));
         }
     }
 
@@ -58,7 +65,7 @@ public class CampaignController : ControllerBase
         }
         catch (Exception ex)
         {
-            return StatusCode(500, ApiResponse<string>.Fail("Xəta baş verdi", ex.Message));
+            return StatusCode(500, ApiResponse<int>.Fail("Server xətası baş verdi", ex.Message));
         }
     }
 
@@ -68,7 +75,7 @@ public class CampaignController : ControllerBase
         try
         {
             var result = await _campaignService.UpdateAsync(id, input);
-            return Ok(ApiResponse<int>.Success(result, "Yeniləndi"));
+            return Ok(ApiResponse<int>.Success(result, "Kampaniya yeniləndi"));
         }
         catch (CampaignNotFoundException ex)
         {
@@ -80,7 +87,7 @@ public class CampaignController : ControllerBase
         }
         catch (Exception ex)
         {
-            return StatusCode(500, ApiResponse<string>.Fail("Xəta baş verdi", ex.Message));
+            return StatusCode(500, ApiResponse<int>.Fail("Server xətası baş verdi", ex.Message));
         }
     }
 
@@ -90,7 +97,7 @@ public class CampaignController : ControllerBase
         try
         {
             await _campaignService.DeleteAsync(id);
-            return Ok(ApiResponse<bool>.Success(true, "Silindi"));
+            return Ok(ApiResponse<bool>.Success(true, "Kampaniya silindi"));
         }
         catch (CampaignNotFoundException ex)
         {
@@ -98,7 +105,7 @@ public class CampaignController : ControllerBase
         }
         catch (Exception ex)
         {
-            return StatusCode(500, ApiResponse<string>.Fail("Server xətası baş verdi", ex.Message));
+            return StatusCode(500, ApiResponse<bool>.Fail("Server xətası baş verdi", ex.Message));
         }
     }
 
@@ -120,7 +127,7 @@ public class CampaignController : ControllerBase
         }
         catch (Exception ex)
         {
-            return StatusCode(500, ApiResponse<string>.Fail("Server xətası baş verdi", ex.Message));
+            return StatusCode(500, ApiResponse<bool>.Fail("Server xətası baş verdi", ex.Message));
         }
     }
 
@@ -142,15 +149,26 @@ public class CampaignController : ControllerBase
         }
         catch (Exception ex)
         {
-            return StatusCode(500, ApiResponse<string>.Fail("Server xətası baş verdi", ex.Message));
+            return StatusCode(500, ApiResponse<bool>.Fail("Server xətası baş verdi", ex.Message));
         }
     }
 
     [HttpGet("Paginated")]
-    public async Task<IActionResult> GetPaginated([FromQuery] PaginationParams @params)
+    public async Task<IActionResult> GetPaginated([FromQuery] PaginationParams query)
     {
-        var result = await _campaignService.GetPaginatedAsync(@params);
-        return Ok(ApiResponse<PagedResult<Campaign>>.Success(result, "Paged nəticələr"));
+        try
+        {
+            var result = await _campaignService.GetPaginatedAsync(query);
+            return Ok(ApiResponse<PagedResult<CampaignOutput>>.Success(result, "Paged nəticələr"));
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ApiResponse<PagedResult<Campaign>>.Fail("Server xətası baş verdi", ex.Message));
+        }
     }
 }
+
+
+
+
 

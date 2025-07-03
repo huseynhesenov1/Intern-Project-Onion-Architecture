@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Project.API.Models;
 using Project.Application.Abstractions.Services.InternalServices;
 using Project.Application.DTOs.DistrictDTOs;
+using Project.Domain.Entities;
 
 namespace Project.API.Controllers
 {
@@ -10,66 +12,82 @@ namespace Project.API.Controllers
     public class DistrictController : ControllerBase
     {
         private readonly IDistrictService _districtService;
+
         public DistrictController(IDistrictService districtService)
         {
             _districtService = districtService;
         }
 
         [HttpGet]
-        public async Task<ICollection<CreateDistrictOutput>> GetAll()
-        {
-            return await _districtService.GetAllAsync();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Create([FromForm] CreateDistrictInput reviewDto)
+        public async Task<IActionResult> GetAll()
         {
             try
             {
-                return StatusCode(StatusCodes.Status201Created, await _districtService.CreateAsync(reviewDto));
+                var result = await _districtService.GetAllAsync();
+                return Ok(ApiResponse<ICollection<CreateDistrictOutput>>.Success(result, "Bütün rayonlar alındı"));
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status400BadRequest, ex.Message);
+                return StatusCode(500, ApiResponse<ICollection<CreateDistrictOutput>>.Fail("Server xətası", ex.Message));
             }
         }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
             try
             {
-                return StatusCode(StatusCodes.Status200OK, await _districtService.GetByIdAsync(id));
+                var result = await _districtService.GetByIdAsync(id);
+                return Ok(ApiResponse<District>.Success(result, "Rayon tapıldı"));
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status400BadRequest, ex.Message);
+                return StatusCode(404, ApiResponse<CreateDistrictOutput>.Fail("Rayon tapılmadı", ex.Message));
             }
         }
-        [HttpDelete("{id}Soft")]
-        public async Task<IActionResult> SoftDelete(int id)
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromForm] CreateDistrictInput input)
         {
             try
             {
-                return StatusCode(StatusCodes.Status200OK, await _districtService.SoftDeleteAsync(id));
+                var result = await _districtService.CreateAsync(input);
+                return StatusCode(201, ApiResponse<District>.Success(result, "Rayon yaradıldı"));
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status400BadRequest, ex.Message);
+                return BadRequest(ApiResponse<int>.Fail("Yaratma zamanı xəta baş verdi", ex.Message));
             }
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromForm] UpdateDistrictInput reviewUpdateDTO)
+        public async Task<IActionResult> Update(int id, [FromForm] UpdateDistrictInput input)
         {
             try
             {
-                return StatusCode(StatusCodes.Status200OK, await _districtService.UpdateAsync(id, reviewUpdateDTO));
+                var result = await _districtService.UpdateAsync(id, input);
+                return Ok(ApiResponse<District>.Success(result, "Rayon yeniləndi"));
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status400BadRequest, ex.Message);
+                return BadRequest(ApiResponse<bool>.Fail("Yeniləmə zamanı xəta baş verdi", ex.Message));
             }
         }
 
+        [HttpDelete("{id}/soft")]
+        public async Task<IActionResult> SoftDelete(int id)
+        {
+            try
+            {
+                var result = await _districtService.SoftDeleteAsync(id);
+                return Ok(ApiResponse<District>.Success(result, "Rayon soft silindi"));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ApiResponse<bool>.Fail("Silinmə zamanı xəta baş verdi", ex.Message));
+            }
+        }
     }
 }
+
+

@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Project.API.Models;
 using Project.Application.Abstractions.Services.InternalServices;
 using Project.Application.DTOs.ProductDTOs;
-using Project.Application.Models;
 using Project.Domain.Entities.Commons;
 
 namespace Project.API.Controllers
@@ -52,7 +51,7 @@ namespace Project.API.Controllers
             try
             {
                 var data = await _productService.GetAllAsync();
-                return ApiResponse<ICollection<CreateProductOutput>>.Success(data);
+                return ApiResponse<ICollection<CreateProductOutput>>.Success(data, "Məhsullar uğurla gətirildi.");
             }
             catch (Exception ex)
             {
@@ -66,7 +65,7 @@ namespace Project.API.Controllers
             try
             {
                 var result = await _productService.GetPaginatedAsync(@params);
-                return Ok(ApiResponse<PagedResult<Project.Domain.Entities.Product>>.Success(result));
+                return Ok(ApiResponse<PagedResult<CreateProductOutput>>.Success(result , "Məhsullar uğurla gətirildi."));
             }
             catch (Exception ex)
             {
@@ -80,7 +79,7 @@ namespace Project.API.Controllers
             try
             {
                 var result = await _productService.GetByIdAsync(id);
-                return ApiResponse<CreateProductOutput>.Success(result);
+                return ApiResponse<CreateProductOutput>.Success(result, "Məhsul uğurla gətirildi.");
             }
             catch (Exception ex)
             {
@@ -94,7 +93,7 @@ namespace Project.API.Controllers
             try
             {
                 var result = await _productService.SearchProductsAsync(title);
-                return ApiResponse<ICollection<CreateProductOutput>>.Success(result);
+                return ApiResponse<ICollection<CreateProductOutput>>.Success(result, "Uyğun məhsullar.");
             }
             catch (Exception ex)
             {

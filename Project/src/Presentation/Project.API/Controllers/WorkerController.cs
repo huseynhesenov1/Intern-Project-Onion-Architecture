@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Project.API.Models;
 using Project.Application.Abstractions.Services.InternalServices;
 using Project.Application.DTOs.WorkerDTOs;
-using Project.Application.Models;
 using Project.Domain.Entities;
 using Project.Domain.Entities.Commons;
 
@@ -22,11 +22,11 @@ public class WorkerController : ControllerBase
         try
         {
             var result = await _workerService.CreateAsync(input);
-            return Ok(ApiResponse<ResponseWorkerOutput>.Success(result, "Worker created successfully"));
+            return Ok(ApiResponse<ResponseWorkerOutput>.Success(result, "Usta uğurla yaradıldı"));
         }
         catch (Exception ex)
         {
-            return BadRequest(ApiResponse<ResponseWorkerOutput>.Fail(ex.Message, "Creation failed"));
+            return BadRequest(ApiResponse<ResponseWorkerOutput>.Fail("Yaratma zamanı xəta baş verdi", ex.Message));
         }
     }
 
@@ -36,33 +36,54 @@ public class WorkerController : ControllerBase
         try
         {
             await _workerService.UpdateAsync(id, input);
-            return Ok(ApiResponse<bool>.Success(true, "Updated successfully"));
+            return Ok(ApiResponse<bool>.Success(true, "Usta uğurla yeniləndi"));
         }
         catch (Exception ex)
         {
-            return BadRequest(ApiResponse<bool>.Fail(ex.Message, "Update failed"));
+            return BadRequest(ApiResponse<bool>.Fail("Yeniləmə zamanı xəta baş verdi", ex.Message));
         }
     }
 
     [HttpGet("all")]
     public async Task<IActionResult> GetAllWorkers()
     {
-        var result = await _workerService.GetAllAsync();
-        return Ok(ApiResponse<ICollection<Worker>>.Success(result, "List retrieved"));
+        try
+        {
+            var result = await _workerService.GetAllAsync();
+            return Ok(ApiResponse<ICollection<Worker>>.Success(result, "Bütün ustalar uğurla alındı"));
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ApiResponse<ICollection<Worker>>.Fail("Xəta baş verdi", ex.Message));
+        }
     }
 
     [HttpGet("Paginated")]
-    public async Task<IActionResult> GetPaginated([FromQuery] PaginationParams @params)
+    public async Task<IActionResult> GetPaginated([FromQuery] PaginationParams paginationParams)
     {
-        var result = await _workerService.GetPaginatedAsync(@params);
-        return Ok(ApiResponse<PagedResult<Worker>>.Success(result, "Paginated list"));
+        try
+        {
+            var result = await _workerService.GetPaginatedAsync(paginationParams);
+            return Ok(ApiResponse<PagedResult<CreateWorkerOutput>>.Success(result, "Səhifələnmiş siyahı uğurla alındı"));
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ApiResponse<PagedResult<Worker>>.Fail("Paged nəticələr alına bilmədi", ex.Message));
+        }
     }
 
     [HttpGet("Search")]
     public async Task<IActionResult> GetSearch([FromQuery] SearchWorkerInput input)
     {
-        var result = await _workerService.SearchProductsAsync(input);
-        return Ok(ApiResponse<ICollection<CreateWorkerOutput>>.Success(result, "Search result"));
+        try
+        {
+            var result = await _workerService.SearchProductsAsync(input);
+            return Ok(ApiResponse<ICollection<CreateWorkerOutput>>.Success(result, "Axtarış nəticələri alındı"));
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ApiResponse<ICollection<CreateWorkerOutput>>.Fail("Axtarış zamanı xəta baş verdi", ex.Message));
+        }
     }
 
     [HttpGet("{id}")]
@@ -71,11 +92,11 @@ public class WorkerController : ControllerBase
         try
         {
             var result = await _workerService.GetByIdAsync(id);
-            return Ok(ApiResponse<CreateWorkerOutput>.Success(result, "Retrieved successfully"));
+            return Ok(ApiResponse<CreateWorkerOutput>.Success(result, "Usta uğurla tapıldı"));
         }
         catch (Exception ex)
         {
-            return NotFound(ApiResponse<CreateWorkerOutput>.Fail(ex.Message, "Worker not found"));
+            return NotFound(ApiResponse<CreateWorkerOutput>.Fail("Usta tapılmadı", ex.Message));
         }
     }
 
@@ -85,12 +106,14 @@ public class WorkerController : ControllerBase
         try
         {
             await _workerService.DeleteAsync(id);
-            return Ok(ApiResponse<bool>.Success(true, "Deleted successfully"));
+            return Ok(ApiResponse<bool>.Success(true, "Usta uğurla silindi"));
         }
         catch (Exception ex)
         {
-            return NotFound(ApiResponse<bool>.Fail(ex.Message, "Delete failed"));
+            return NotFound(ApiResponse<bool>.Fail("Silinmə zamanı xəta baş verdi", ex.Message));
         }
     }
 }
+
+
 

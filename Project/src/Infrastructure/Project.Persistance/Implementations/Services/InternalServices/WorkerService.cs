@@ -79,16 +79,32 @@ public class WorkerService : IWorkerService
         return await _workerReadRepository.GetAllAsync(false);
     }
 
-    public async Task<PagedResult<Worker>> GetPaginatedAsync(PaginationParams @params)
+    public async Task<PagedResult<CreateWorkerOutput>> GetPaginatedAsync(PaginationParams paginationParams)
     {
-        var allWorkers = await _workerReadRepository.GetAllAsync( false);
+        var allWorkers = await _workerReadRepository.GetAllAsync(false);
+
         var filtered = allWorkers
-            .Skip((@params.PageNumber - 1) * @params.PageSize)
-            .Take(@params.PageSize)
+            .Skip((paginationParams.PageNumber - 1) * paginationParams.PageSize)
+            .Take(paginationParams.PageSize)
             .ToList();
 
-        return new PagedResult<Worker>(filtered, allWorkers.Count, @params.PageNumber, @params.PageSize);
+        var mapped = filtered.Select(w => new CreateWorkerOutput
+        {
+            WorkerId = w.Id,
+            FinCode = w.FinCode,
+            FullName = w.FullName,
+            BirthDate = w.BirthDate,
+            DistrictId = w.DistrictId
+        }).ToList();
+
+        return new PagedResult<CreateWorkerOutput>(
+            items: mapped,
+            totalCount: allWorkers.Count,
+            pageNumber: paginationParams.PageNumber,
+            pageSize: paginationParams.PageSize
+        );
     }
+
 
     public async Task<CreateWorkerOutput> GetByIdAsync(int id)
     {

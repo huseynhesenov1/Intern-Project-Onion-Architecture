@@ -6,7 +6,6 @@ using Project.Application.Abstractions.Repositories.Worker;
 using Project.Application.Abstractions.Services.InternalServices;
 using Project.Application.Abstractions.UnitOfWork;
 using Project.Application.DTOs.OrderDTOs;
-using Project.Application.Models;
 using Project.Domain.Entities;
 using Project.Domain.Entities.Commons;
 using System.Security.Claims;
@@ -91,7 +90,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
        
 
 
-        public async Task<PagedResult<CreateOrderOutput>> GetPaginatedAsync(PaginationParams @params)
+        public async Task<PagedResult<CreateOrderOutput>> GetPaginatedAsync(PaginationParams paginationParams)
         {
             var orders = await _orderReadRepository.GetAllAsync(false, o=>o.Product);
             var campaigns = await _campaignReadRepository.GetAllAsync( false);
@@ -120,11 +119,11 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             int totalCount = orderDTOs.Count;
 
             var paginatedDTOs = orderDTOs
-                .Skip((@params.PageNumber - 1) * @params.PageSize)
-                .Take(@params.PageSize)
+                .Skip((paginationParams.PageNumber - 1) * paginationParams.PageSize)
+                .Take(paginationParams.PageSize)
                 .ToList();
 
-            return new PagedResult<CreateOrderOutput>(paginatedDTOs, totalCount, @params.PageNumber, @params.PageSize);
+            return new PagedResult<CreateOrderOutput>(paginatedDTOs, totalCount, paginationParams.PageNumber, paginationParams.PageSize);
         }
 
 

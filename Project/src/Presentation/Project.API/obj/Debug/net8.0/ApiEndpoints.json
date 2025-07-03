@@ -139,17 +139,7 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.ICollection\u00601[[Project.Application.DTOs.DistrictDTOs.CreateDistrictOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Project.API.Controllers.DistrictController",
@@ -207,7 +197,7 @@
   {
     "ContainingType": "Project.API.Controllers.DistrictController",
     "Method": "SoftDelete",
-    "RelativePath": "api/District/{id}Soft",
+    "RelativePath": "api/District/{id}/soft",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -236,7 +226,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[Project.Application.DTOs.OrderDTOs.CreateOrderResponse, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Project.API.Models.ApiResponse\u00601[[Project.Application.DTOs.OrderDTOs.CreateOrderResponse, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -293,7 +283,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "Project.API.Models.ApiResponse\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -313,7 +303,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[System.Collections.Generic.ICollection\u00601[[Project.Application.DTOs.ProductDTOs.CreateProductOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "Project.API.Models.ApiResponse\u00601[[System.Collections.Generic.ICollection\u00601[[Project.Application.DTOs.ProductDTOs.CreateProductOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -339,7 +329,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[Project.Application.DTOs.ProductDTOs.CreateProductOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Project.API.Models.ApiResponse\u00601[[Project.Application.DTOs.ProductDTOs.CreateProductOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -365,7 +355,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "Project.API.Models.ApiResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -396,7 +386,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "Project.API.Models.ApiResponse\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -443,7 +433,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Project.Application.Models.ApiResponse\u00601[[System.Collections.Generic.ICollection\u00601[[Project.Application.DTOs.ProductDTOs.CreateProductOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "Project.API.Models.ApiResponse\u00601[[System.Collections.Generic.ICollection\u00601[[Project.Application.DTOs.ProductDTOs.CreateProductOutput, Project.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -462,7 +452,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "productDistrictPriceCreateDTO",
+        "Name": "input",
         "Type": "Project.Application.DTOs.ProductDistrictPriceDTOs.CreateProductDistrictPriceInput",
         "IsRequired": true
       }

@@ -27,6 +27,7 @@ public class ReadRepository<T> : IReadRepository<T> where T : BaseAuditableEntit
                 query = query.Include(include);
             }
         }
+        query = query.AsNoTracking();
         T? tentity = await query.FirstOrDefaultAsync(x => x.Id == id);
         return tentity;
 
