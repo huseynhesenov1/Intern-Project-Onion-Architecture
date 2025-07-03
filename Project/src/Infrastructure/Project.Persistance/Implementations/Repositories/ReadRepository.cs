@@ -17,16 +17,12 @@ public class ReadRepository<T> : IReadRepository<T> where T : BaseAuditableEntit
 
     public DbSet<T> Table => _context.Set<T>();
 
-    public async Task<T> GetByIdAsync(int id, bool isTracking, params string[] includes)
+    public async Task<T> GetByIdAsync(int id, params Expression<Func<T, object>>[] includes)
     {
         IQueryable<T> query = Table.AsQueryable();
-        if (!isTracking)
-        {
-            query = query.AsNoTracking();
-        }
         if (includes.Length > 0)
         {
-            foreach (string include in includes)
+            foreach (var include in includes)
             {
                 query = query.Include(include);
             }
@@ -36,7 +32,7 @@ public class ReadRepository<T> : IReadRepository<T> where T : BaseAuditableEntit
 
     }
 
-    public async Task<ICollection<T>> GetAllAsync(bool deleted, bool isTracking, params Expression<Func<T, object>>[] includes)
+    public async Task<ICollection<T>> GetAllAsync(bool isTracking, params Expression<Func<T, object>>[] includes)
     {
         IQueryable<T> query = Table.AsQueryable();
 
@@ -47,14 +43,10 @@ public class ReadRepository<T> : IReadRepository<T> where T : BaseAuditableEntit
                 query = query.Include(include);
             }
         }
-
         if (!isTracking)
         {
             query = query.AsNoTracking();
         }
-
-        query = query.Where(x => x.IsDeleted == deleted);
-
         return await query.ToListAsync();
     }
 

@@ -37,17 +37,17 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                 throw new Exception("Unauthorized");
 
             var workerId = int.Parse(workerIdClaim.Value);
-            var worker = await _workerReadRepository.GetByIdAsync(workerId, true, "District");
+            var worker = await _workerReadRepository.GetByIdAsync(workerId, o=>o.District);
             if (worker == null)
                 throw new Exception("Worker not found");
 
-            var product = await _productReadRepository.GetByIdAsync(dto.ProductId, true, "ProductDistrictPrices");
+            var product = await _productReadRepository.GetByIdAsync(dto.ProductId, o => o.ProductDistrictPrices);
             if (product == null)
                 throw new Exception("Product not found");
 
             decimal finalPrice = product.Price;
 
-            var campaigns = await _campaignReadRepository.GetAllAsync(false, false);
+            var campaigns = await _campaignReadRepository.GetAllAsync(false);
             var activeCampaign = campaigns.FirstOrDefault(c =>
                 c.IsActive &&
                 DateTime.UtcNow >= c.StartDate &&
@@ -75,7 +75,6 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                 ProductCount = dto.ProductCount,
                 WorkerId = workerId,
                 TotalPrice = totalPrice,
-                CreatedAt = DateTime.UtcNow.AddHours(4)
             };
 
             await _orderWriteRepository.CreateAsync(order);
@@ -91,8 +90,8 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<PagedResult<CreateOrderOutput>> GetPaginatedAsync(PaginationParams @params)
         {
-            var orders = await _orderReadRepository.GetAllAsync(false, false, o=>o.Product);
-            var campaigns = await _campaignReadRepository.GetAllAsync(false, false);
+            var orders = await _orderReadRepository.GetAllAsync(false, o=>o.Product);
+            var campaigns = await _campaignReadRepository.GetAllAsync( false);
 
             var orderDTOs = orders.Select(o =>
             {
@@ -128,8 +127,8 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<ICollection<CreateOrderOutput>> GetAllAsync()
         {
-            var orders = await _orderReadRepository.GetAllAsync(false, false, o=>o.Product);
-            var campaigns = await _campaignReadRepository.GetAllAsync(false , false);
+            var orders = await _orderReadRepository.GetAllAsync(false, o=>o.Product);
+            var campaigns = await _campaignReadRepository.GetAllAsync( false);
             
             return orders.Select(o =>
             {

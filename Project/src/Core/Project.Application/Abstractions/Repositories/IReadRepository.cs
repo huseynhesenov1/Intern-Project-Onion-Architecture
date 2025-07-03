@@ -5,8 +5,7 @@ namespace Project.Application.Abstractions.Repositories;
 
 public interface IReadRepository<T> : IRepository<T> where T : BaseAuditableEntity, new()
 {
-    Task<T> GetByIdAsync(int id, bool isTracking, params string[] includes);
-    //Task<ICollection<T>> GetAllAsync(bool deleted, bool isTracking, params string[] includes);
-    Task<ICollection<T>> GetAllAsync(bool deleted, bool isTracking, params Expression<Func<T, object>>[] includes);
+    Task<T> GetByIdAsync(int id,  params Expression<Func<T, object>>[] includes);
+    Task<ICollection<T>> GetAllAsync(bool isTracking, params Expression<Func<T, object>>[] includes);
 
 }

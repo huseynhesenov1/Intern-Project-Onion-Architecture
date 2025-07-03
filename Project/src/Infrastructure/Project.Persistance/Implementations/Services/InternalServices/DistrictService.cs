@@ -23,7 +23,6 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             {
                 Name = districtCreateDTO.Name,
             };
-            district.CreatedAt = DateTime.UtcNow.AddHours(4);
             await _districtWriteRepository.CreateAsync(district);
             await _districtWriteRepository.SaveChangeAsync();
             return district;
@@ -32,7 +31,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<District> UpdateAsync(int Id, UpdateDistrictInput districtUpdateDTO)
         {
-            District district = await _districtReadRepository.GetByIdAsync(Id, false);
+            District district = await _districtReadRepository.GetByIdAsync(Id);
             if (district == null)
             {
                 throw new Exception("Invalid ID");
@@ -52,7 +51,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<ICollection<CreateDistrictOutput>> GetAllAsync()
         {
-            ICollection<District> districts = await _districtReadRepository.GetAllAsync(false, false);
+            ICollection<District> districts = await _districtReadRepository.GetAllAsync(false);
             List<CreateDistrictOutput> districtReadDTOs = districts
                 .Select(d => new CreateDistrictOutput
                 {
@@ -65,7 +64,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<District> GetByIdAsync(int id)
         {
-            District district = await _districtReadRepository.GetByIdAsync(id, false);
+            District district = await _districtReadRepository.GetByIdAsync(id);
             if (district is null)
             {
                 throw new Exception("Bu Id-e uygun deyer tapilmadi");
@@ -77,7 +76,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<District> SoftDeleteAsync(int id)
         {
-            District district = await _districtReadRepository.GetByIdAsync(id, true);
+            District district = await _districtReadRepository.GetByIdAsync(id);
             if (district is null)
             {
                 throw new Exception("Bu Id-e uygun deyer tapilmadi");

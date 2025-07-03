@@ -22,7 +22,7 @@ public class WorkerService : IWorkerService
 
     public async Task<ResponseWorkerOutput> CreateAsync(CreateWorkerInput input)
     {
-        var workers = await _workerReadRepository.GetAllAsync(false, false);
+        var workers = await _workerReadRepository.GetAllAsync(false);
         var existingWorker = workers.FirstOrDefault(w => w.FinCode == input.FinCode && !w.IsDeleted);
 
         if (existingWorker != null)
@@ -50,10 +50,10 @@ public class WorkerService : IWorkerService
 
     public async Task<bool> UpdateAsync(int id, UpdateWorkerInput input)
     {
-        var worker = await _workerReadRepository.GetByIdAsync(id, true);
+        var worker = await _workerReadRepository.GetByIdAsync(id);
         if (worker == null || worker.IsDeleted)
             throw new Exception("Worker not found");
-        var workers = await _workerReadRepository.GetAllAsync(false, false);
+        var workers = await _workerReadRepository.GetAllAsync(false);
         var existingWorker = workers.FirstOrDefault(w => w.FinCode == input.FinCode && !w.IsDeleted);
         if (existingWorker != null)
             throw new Exception("Worker with this FinCode already exists");
@@ -72,12 +72,12 @@ public class WorkerService : IWorkerService
 
     public async Task<ICollection<Worker>> GetAllAsync()
     {
-        return await _workerReadRepository.GetAllAsync(false, false);
+        return await _workerReadRepository.GetAllAsync(false);
     }
 
     public async Task<PagedResult<Worker>> GetPaginatedAsync(PaginationParams @params)
     {
-        var allWorkers = await _workerReadRepository.GetAllAsync(false, false);
+        var allWorkers = await _workerReadRepository.GetAllAsync( false);
         var filtered = allWorkers
             .Skip((@params.PageNumber - 1) * @params.PageSize)
             .Take(@params.PageSize)
@@ -88,7 +88,7 @@ public class WorkerService : IWorkerService
 
     public async Task<CreateWorkerOutput> GetByIdAsync(int id)
     {
-        var worker = await _workerReadRepository.GetByIdAsync(id, true);
+        var worker = await _workerReadRepository.GetByIdAsync(id);
         if (worker == null || worker.IsDeleted)
             throw new Exception("Worker not found");
 
@@ -104,7 +104,7 @@ public class WorkerService : IWorkerService
 
     public async Task<bool> DeleteAsync(int id)
     {
-        var worker = await _workerReadRepository.GetByIdAsync(id, true);
+        var worker = await _workerReadRepository.GetByIdAsync(id);
         if (worker == null || worker.IsDeleted)
             throw new Exception("Worker not found");
 
@@ -116,7 +116,7 @@ public class WorkerService : IWorkerService
 
     public async Task<ICollection<CreateWorkerOutput>> SearchProductsAsync(SearchWorkerInput input)
     {
-        var query = await _workerReadRepository.GetAllAsync(false, false);
+        var query = await _workerReadRepository.GetAllAsync(false);
 
         query = query
             .Where(p =>

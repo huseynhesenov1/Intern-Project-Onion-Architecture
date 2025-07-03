@@ -24,7 +24,6 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                 ProductId = dto.ProductId,
                 DistrictId = dto.DistrictId,
             };
-            productDistrictPrice.CreatedAt = DateTime.UtcNow.AddHours(4);
             var res = await _productDistrictPriceWriteRepository.CreateAsync(productDistrictPrice);
             await _productDistrictPriceWriteRepository.SaveChangeAsync();
             return res;
@@ -32,7 +31,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<ICollection<ProductDistrictPrice>> GetAllAsync()
         {
-            ICollection<ProductDistrictPrice> result = await _productDistrictPriceReadRepository.GetAllAsync(false, false);
+            ICollection<ProductDistrictPrice> result = await _productDistrictPriceReadRepository.GetAllAsync(false);
             return result;
         }
     }

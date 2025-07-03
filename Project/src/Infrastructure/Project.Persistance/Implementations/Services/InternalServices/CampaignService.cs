@@ -26,7 +26,7 @@ public class CampaignService : ICampaignService
         var newEndDate = input.EndDate;
 
 
-        var campaigns = await _campaignReadRepository.GetAllAsync(false, false);
+        var campaigns = await _campaignReadRepository.GetAllAsync(false);
 
         var conflict = campaigns.FirstOrDefault(c =>
                 !c.IsDeleted &&
@@ -47,9 +47,6 @@ public class CampaignService : ICampaignService
             EndDate = input.EndDate,
             DiscountPercent = input.DiscountPercent,
             DistrictId = input.DistrictId,
-            CreatedAt = DateTime.UtcNow,
-            UpdatedAt = DateTime.UtcNow,
-            IsDeleted = false
         };
 
         var created = await _campaignWriteRepository.CreateAsync(entity);
@@ -62,11 +59,11 @@ public class CampaignService : ICampaignService
 
     public async Task<int> UpdateAsync(int id, UpdateCampaignInput input)
     {
-        var existing = await _campaignReadRepository.GetByIdAsync(id, true);
+        var existing = await _campaignReadRepository.GetByIdAsync(id);
         if (existing == null || existing.IsDeleted)
             throw new CampaignNotFoundException(id);
 
-        var others = await _campaignReadRepository.GetAllAsync(false, false);
+        var others = await _campaignReadRepository.GetAllAsync( false);
         var conflict = others.FirstOrDefault(c =>
             c.Id != id && !c.IsDeleted &&
             ((input.StartDate >= c.StartDate && input.StartDate <= c.EndDate) ||
@@ -93,7 +90,7 @@ public class CampaignService : ICampaignService
 
     public async Task<ICollection<CampaignOutput>> GetAllAsync()
     {
-        var campaigns = await _campaignReadRepository.GetAllAsync(false, false);
+        var campaigns = await _campaignReadRepository.GetAllAsync(false);
         return campaigns.Select(c => new CampaignOutput
         {
             Id = c.Id,
@@ -111,7 +108,7 @@ public class CampaignService : ICampaignService
 
     public async Task<CampaignOutput> GetByIdAsync(int id)
     {
-        var c = await _campaignReadRepository.GetByIdAsync(id, false);
+        var c = await _campaignReadRepository.GetByIdAsync(id);
         if (c == null || c.IsDeleted)
             throw new CampaignNotFoundException(id);
 
@@ -132,7 +129,7 @@ public class CampaignService : ICampaignService
 
     public async Task<bool> DeleteAsync(int id)
     {
-        var campaign = await _campaignReadRepository.GetByIdAsync(id, true);
+        var campaign = await _campaignReadRepository.GetByIdAsync(id);
         if (campaign == null || campaign.IsDeleted)
             throw new CampaignNotFoundException(id);
 
@@ -143,7 +140,7 @@ public class CampaignService : ICampaignService
 
     public async Task<bool> EnableAsync(int id)
     {
-        var campaign = await _campaignReadRepository.GetByIdAsync(id, true);
+        var campaign = await _campaignReadRepository.GetByIdAsync(id);
         if (campaign == null)
             throw new CampaignNotFoundException(id);
 
@@ -157,7 +154,7 @@ public class CampaignService : ICampaignService
 
     public async Task<bool> DisableAsync(int id)
     {
-        var campaign = await _campaignReadRepository.GetByIdAsync(id, true);
+        var campaign = await _campaignReadRepository.GetByIdAsync(id);
         if (campaign == null)
             throw new CampaignNotFoundException(id);
 
@@ -171,7 +168,7 @@ public class CampaignService : ICampaignService
 
     public async Task<PagedResult<Campaign>> GetPaginatedAsync(PaginationParams @params)
     {
-        var all = await _campaignReadRepository.GetAllAsync(false, false);
+        var all = await _campaignReadRepository.GetAllAsync(false);
         var filtered = all.Skip((@params.PageNumber - 1) * @params.PageSize)
                           .Take(@params.PageSize)
                           .ToList();

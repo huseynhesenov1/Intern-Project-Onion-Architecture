@@ -17,4 +17,5 @@ public class AppDbContext: DbContext
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(WorkerConfiguration).Assembly);
     }
+   
 }

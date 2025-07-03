@@ -26,8 +26,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
             var product = new Product
             {
                 Title = productCreateDTO.Title,
-                Price = productCreateDTO.Price,
-                CreatedAt = DateTime.UtcNow.AddHours(4)
+                Price = productCreateDTO.Price
             };
             var result = await _productWriteRepository.CreateAsync(product);
             if (result == null)
@@ -39,7 +38,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<int> UpdateAsync(int id, UpdateProductInput productUpdateDTO)
         {
-            var product = await _productReadRepository.GetByIdAsync(id, true);
+            var product = await _productReadRepository.GetByIdAsync(id);
             if (product == null || product.IsDeleted)
                 throw new Exception("Product not found");
             product.Title = productUpdateDTO.Title;
@@ -52,8 +51,8 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<ICollection<CreateProductOutput>> GetAllAsync()
         {
-            var products = await _productReadRepository.GetAllAsync(false, false);
-            var campaigns = await _campaignReadRepository.GetAllAsync(false, false);
+            var products = await _productReadRepository.GetAllAsync( false);
+            var campaigns = await _campaignReadRepository.GetAllAsync( false);
             var currentTime = DateTime.UtcNow.AddHours(4);
 
 
@@ -67,7 +66,6 @@ namespace Project.Persistance.Implementations.Services.InternalServices
                 decimal newPrice = p.Price;
                 string campaignName = string.Empty;
                 int campaignId = -1;
-                //int distirctId = -1; // Kampaniya ID
 
                 if (activeCampaign != null)
                 {
@@ -94,14 +92,14 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<PagedResult<Product>> GetPaginatedAsync(PaginationParams @params)
         {
-            var all = await _productReadRepository.GetAllAsync(false, false);
+            var all = await _productReadRepository.GetAllAsync(false);
             var filtered = all.Skip((@params.PageNumber - 1) * @params.PageSize).Take(@params.PageSize).ToList();
             return new PagedResult<Product>(filtered, all.Count, @params.PageNumber, @params.PageSize);
         }
 
         public async Task<CreateProductOutput> GetByIdAsync(int id)
         {
-            var product = await _productReadRepository.GetByIdAsync(id, false);
+            var product = await _productReadRepository.GetByIdAsync(id);
             if (product == null || product.IsDeleted)
                 throw new Exception("Product not found");
 
@@ -118,7 +116,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var product = await _productReadRepository.GetByIdAsync(id, true);
+            var product = await _productReadRepository.GetByIdAsync(id);
             if (product == null || product.IsDeleted)
                 throw new Exception("Product not found");
             _productWriteRepository.SoftDelete(product);
@@ -128,7 +126,7 @@ namespace Project.Persistance.Implementations.Services.InternalServices
 
         public async Task<ICollection<CreateProductOutput>> SearchProductsAsync(string title)
         {
-            var products = await _productReadRepository.GetAllAsync(false, false);
+            var products = await _productReadRepository.GetAllAsync(false);
 
             return products
                 .Where(p => string.IsNullOrWhiteSpace(title) || p.Title.Contains(title, StringComparison.OrdinalIgnoreCase))
